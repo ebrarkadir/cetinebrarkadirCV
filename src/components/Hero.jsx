@@ -7,6 +7,7 @@ const Hero = () => {
     <div
       id="home"
       className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-white flex flex-col-reverse md:flex-row items-center justify-center px-6 md:px-20 py-12 gap-12"
+
     >
       {/* Yazı Kısmı */}
       <motion.div

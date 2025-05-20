@@ -1,20 +1,12 @@
 // src/components/Projects.jsx
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import projects from "../data/projectsData";
-import { motion, AnimatePresence } from "framer-motion";
 
 const Projects = () => {
   const [selected, setSelected] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [shouldAnimate, setShouldAnimate] = useState(false);
   const itemsPerPage = 5;
-
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (hash === "#projects") {
-      setShouldAnimate(true);
-    }
-  }, []);
 
   const totalPages = Math.ceil(projects.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -23,15 +15,14 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-20 bg-gradient-to-b from-gray-900 to-gray-950 text-white min-h-screen px-6"
+      className="py-20 bg-gradient-to-b from-gray-950 to-gray-900 text-white min-h-screen px-6"
     >
       <motion.h2
         className="text-4xl md:text-5xl font-bold text-green-400 mb-6 text-center"
         initial={{ opacity: 0, y: 40 }}
-        animate={shouldAnimate ? { opacity: 1, y: 0 } : ""}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        viewport={{ once: true, amount: 0.4 }}
+        viewport={{ once: false, amount: 0.3 }}
       >
         Projelerim
       </motion.h2>
@@ -39,55 +30,46 @@ const Projects = () => {
       <motion.p
         className="text-center text-gray-300 mb-12 max-w-2xl mx-auto text-lg"
         initial={{ opacity: 0, y: 20 }}
-        animate={shouldAnimate ? { opacity: 1, y: 0 } : ""}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        viewport={{ once: true, amount: 0.4 }}
+        viewport={{ once: false, amount: 0.3 }}
       >
-        İşte bugüne kadar geliştirdiğim, her biri kendi alanında özgün çözümler sunan projelerim.
+        İşte bugüne kadar geliştirdiğim, her biri kendi alanında özgün çözümler
+        sunan projelerim.
       </motion.p>
 
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentPage}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 30 }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-wrap justify-center gap-6"
-        >
-          {currentProjects.map((project) => (
-            <motion.div
-              key={project.id}
-              className="w-full sm:w-[280px] md:w-[320px] bg-white/5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden shadow-xl cursor-pointer hover:scale-[1.03] transition"
-              whileHover={{ scale: 1.03 }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              viewport={{ once: true, amount: 0.2 }}
-            >
-              <div className="relative" onClick={() => setSelected(project)}>
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover object-top"
-                />
-                <div className="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition flex items-center justify-center text-green-400 font-semibold text-lg">
-                  Detayları Gör
-                </div>
+      <div className="flex flex-wrap justify-center gap-6">
+        {currentProjects.map((project) => (
+          <motion.div
+            key={project.id}
+            className="w-full sm:w-[280px] md:w-[320px] bg-white/5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden shadow-xl cursor-pointer hover:scale-[1.03] transition"
+            whileHover={{ scale: 1.03 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            viewport={{ once: false, amount: 0.2 }}
+          >
+            <div className="relative" onClick={() => setSelected(project)}>
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-cover object-top"
+              />
+              <div className="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition flex items-center justify-center text-green-400 font-semibold text-lg">
+                Detayları Gör
               </div>
-              <div className="p-4">
-                <h3 className="text-xl font-bold text-green-400 mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-gray-300">
-                  {project.shortDescription}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </AnimatePresence>
+            </div>
+            <div className="p-4">
+              <h3 className="text-xl font-bold text-green-400 mb-2">
+                {project.title}
+              </h3>
+              <p className="text-sm text-gray-300">
+                {project.shortDescription}
+              </p>
+            </div>
+          </motion.div>
+        ))}
+      </div>
 
       {/* Sayfa Geçişleri */}
       <div className="flex justify-center gap-4 mt-10">
@@ -162,6 +144,26 @@ const Projects = () => {
           </div>
         </div>
       )}
+
+      {/* GitHub Bağlantısı */}
+      <motion.p
+        className="text-center text-gray-400 mt-16 text-sm md:text-base"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true, amount: 0.4 }}
+      >
+        Bu projelerin detaylarına ve daha fazlasına {" "}
+        <a
+          href="https://github.com/ebrarkadir"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-green-400 hover:underline"
+        >
+          GitHub profilimden
+        </a>{" "}
+        ulaşabilirsiniz.
+      </motion.p>
     </section>
   );
 };

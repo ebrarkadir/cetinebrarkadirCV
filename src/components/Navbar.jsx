@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const links = [
-  { name: "Anasayfa", href: "#home" },
-  { name: "Hakkımda", href: "#about" },
-  { name: "Projeler", href: "#projects" },
-  { name: "CV", href: "#resume" },
-  { name: "İletişim", href: "#contact" },
+  { name: "Anasayfa", to: "home" },
+  { name: "Hakkımda", to: "about" },
+  { name: "Projeler", to: "projects" },
+  { name: "Özgeçmiş (CV)", to: "resume" },
+  { name: "İletişim", to: "contact" },
 ];
 
 const Navbar = () => {
@@ -20,17 +21,29 @@ const Navbar = () => {
       transition={{ duration: 0.6 }}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#home" className="text-2xl font-bold text-green-400">
-          Ebrar Kadir
-        </a>
+        <Link
+          to="home"
+          smooth={true}
+          duration={500}
+          offset={-60}
+          className="text-2xl font-bold text-green-400 cursor-pointer flex items-center gap-2"
+        >
+          <span className="text-xl">&lt;/&gt;</span> Ebrar Kadir
+        </Link>
 
         {/* Desktop */}
         <ul className="hidden md:flex gap-8 text-lg font-medium">
           {links.map((link) => (
             <li key={link.name}>
-              <a href={link.href} className="hover:text-green-400 transition">
+              <Link
+                to={link.to}
+                smooth={true}
+                duration={500}
+                offset={-60}
+                className="hover:text-green-400 transition cursor-pointer"
+              >
                 {link.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -50,13 +63,16 @@ const Navbar = () => {
           <ul className="flex flex-col gap-4">
             {links.map((link) => (
               <li key={link.name}>
-                <a
-                  href={link.href}
-                  className="block text-lg text-gray-200 hover:text-green-400"
+                <Link
+                  to={link.to}
+                  smooth={true}
+                  duration={500}
+                  offset={-60}
+                  className="block text-lg text-gray-200 hover:text-green-400 cursor-pointer"
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

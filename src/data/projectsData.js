@@ -21,7 +21,7 @@ const projects = [
     {
       id: 3,
       title: "FoodDB",
-      image: "/assets/fooddb.jpg",
+      image: "/assets/fooddb.png",
       shortDescription: "Yemek verilerini yöneten veri tabanı projesi.",
       fullDescription: "Bu alana proje hakkında daha detaylı açıklama gelecek.",
       github: "#",
@@ -39,7 +39,7 @@ const projects = [
     {
       id: 5,
       title: "Tcp_server_client",
-      image: "/assets/tcp.jpg",
+      image: "/assets/tcp.png",
       shortDescription: "TCP üzerinden haberleşen istemci-sunucu uygulaması.",
       fullDescription: "Bu alana proje hakkında daha detaylı açıklama gelecek.",
       github: "#",

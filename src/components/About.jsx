@@ -2,13 +2,27 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const skills = [
-  "HTML", "CSS", "JavaScript", "React", "Node.js", "Express",
-  "Tailwind CSS", "Go", "Python", "OpenWRT", "Firebase", "Linux"
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Node.js",
+  "Express",
+  "Tailwind CSS",
+  "Go",
+  "Python",
+  "OpenWRT",
+  "Firebase",
+  "Linux",
 ];
 
 const About = () => {
   return (
-    <div id="about" className="min-h-screen bg-gray-900 text-white py-20 px-6 md:px-20">
+    <div
+      id="about"
+      className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-white py-20 px-6 md:px-20"
+
+    >
       <motion.h2
         className="text-4xl md:text-5xl font-bold text-green-400 mb-8 text-center"
         initial={{ opacity: 0, y: 40 }}
@@ -25,7 +39,11 @@ const About = () => {
         transition={{ delay: 0.2, duration: 1 }}
       >
         <p>
-          Merhaba, ben <strong className="text-white">Ebrar Kadir Çetin</strong>. Bilgisayar Mühendisiyim. Full Stack Web Geliştirme, Network Güvenliği ve Sistem Programlama konularında çalışıyorum. React, Go, OpenWRT, Firebase gibi teknolojilerle projeler geliştiriyor ve kendimi sürekli olarak güncel teknolojilerle geliştiriyorum.
+          Merhaba, ben <strong className="text-white">Ebrar Kadir Çetin</strong>
+          . Bilgisayar Mühendisiyim. Full Stack Web Geliştirme, Network
+          Güvenliği ve Sistem Programlama konularında çalışıyorum. React, Go,
+          OpenWRT, Firebase gibi teknolojilerle projeler geliştiriyor ve kendimi
+          sürekli olarak güncel teknolojilerle geliştiriyorum.
         </p>
       </motion.div>
 
