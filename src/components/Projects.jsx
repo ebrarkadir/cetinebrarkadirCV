@@ -7,10 +7,19 @@ const Projects = () => {
   const [selected, setSelected] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
+  const [slideIndex, setSlideIndex] = useState(0);
 
   const totalPages = Math.ceil(projects.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentProjects = projects.slice(startIndex, startIndex + itemsPerPage);
+
+  const handlePrev = (imagesLength) => {
+    setSlideIndex((prev) => (prev - 1 + imagesLength) % imagesLength);
+  };
+
+  const handleNext = (imagesLength) => {
+    setSlideIndex((prev) => (prev + 1) % imagesLength);
+  };
 
   return (
     <section
@@ -51,7 +60,7 @@ const Projects = () => {
           >
             <div className="relative" onClick={() => setSelected(project)}>
               <img
-                src={project.image}
+                src={project.images ? project.images[0] : project.image}
                 alt={project.title}
                 className="w-full h-48 object-cover object-top"
               />
@@ -112,11 +121,35 @@ const Projects = () => {
             >
               ✕
             </button>
-            <img
-              src={selected.image}
-              alt={selected.title}
-              className="w-full max-h-[400px] object-contain rounded mb-6"
-            />
+            {/* Slider */}
+            {selected.images && selected.images.length > 1 ? (
+              <div className="relative">
+                <img
+                  src={selected.images[slideIndex]}
+                  alt={selected.title}
+                  className="w-full max-h-[400px] object-contain rounded mb-6"
+                />
+                <button
+                  onClick={() => handlePrev(selected.images.length)}
+                  className="absolute left-2 top-1/2 transform -translate-y-1/2 text-white text-2xl"
+                >
+                  ◀
+                </button>
+                <button
+                  onClick={() => handleNext(selected.images.length)}
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white text-2xl"
+                >
+                  ▶
+                </button>
+              </div>
+            ) : (
+              <img
+                src={selected.image}
+                alt={selected.title}
+                className="w-full max-h-[400px] object-contain rounded mb-6"
+              />
+            )}
+
             <h3 className="text-3xl font-bold text-green-400 mb-4">
               {selected.title}
             </h3>
