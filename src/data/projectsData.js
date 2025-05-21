@@ -91,7 +91,13 @@ const projects = [
   {
     id: 7,
     title: "ShareLocation",
-    image: "/assets/sharelocation.jpg",
+    images: [
+      "/assets/location.png",
+      "/assets/location1.png",
+      "/assets/location2.png",
+      "/assets/location3.png",
+      
+    ],
     shortDescription: "Gerçek zamanlı konum paylaşma uygulaması.",
     fullDescription: "Bu alana proje hakkında daha detaylı açıklama gelecek.",
     github: "#",

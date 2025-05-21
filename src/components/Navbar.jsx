@@ -1,8 +1,7 @@
 // src/components/Navbar.jsx
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-scroll";
-import { FaTimes } from "react-icons/fa";
 
 const links = [
   { name: "Anasayfa", to: "home" },
@@ -33,7 +32,6 @@ const Navbar = () => {
           <span className="text-xl">&lt;/&gt;</span> Ebrar Kadir
         </Link>
 
-        {/* Desktop */}
         <ul className="hidden md:flex gap-8 text-lg font-medium">
           {links.map((link) => (
             <li key={link.name}>
@@ -50,26 +48,24 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Mobile Button */}
         <button
           className="md:hidden focus:outline-none"
-          onClick={() => setMenuOpen(true)}
+          onClick={() => setMenuOpen(!menuOpen)}
         >
           <span className="text-3xl">☰</span>
         </button>
       </div>
 
-      {/* Mobile Menu Slide-In */}
-      {menuOpen && (
-        <div className="fixed inset-0 z-[100] bg-black bg-opacity-90 flex items-center justify-center">
-          <div className="bg-gray-900 text-white w-10/12 max-w-sm rounded-xl shadow-xl p-6 relative">
-            <button
-              onClick={() => setMenuOpen(false)}
-              className="absolute top-4 right-4 text-white text-2xl hover:text-red-500"
-            >
-              <FaTimes />
-            </button>
-            <ul className="flex flex-col items-center gap-6 mt-12">
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            className="absolute top-full left-0 w-full bg-gradient-to-b from-black via-gray-900 to-black text-white shadow-md px-6 py-8"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+          >
+            <ul className="flex flex-col gap-6">
               {links.map((link) => (
                 <li key={link.name}>
                   <Link
@@ -85,9 +81,9 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 };
