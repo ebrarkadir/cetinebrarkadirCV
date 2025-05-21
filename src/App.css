@@ -1,6 +1,12 @@
 .App {
   text-align: center;
 }
+/* Tüm site boyunca kullanıcı metni seçemesin ve caret görünmesin */
+* {
+  user-select: none;
+  caret-color: transparent;
+}
+
 
 .App-logo {
   height: 40vmin;
