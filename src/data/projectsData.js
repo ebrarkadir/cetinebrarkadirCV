@@ -48,28 +48,44 @@ const projects = [
   {
     id: 4,
     title: ".NET Backend Project",
-    image: "/assets/dotnet.jpg",
-    shortDescription: ".NET Core tabanlı backend servis uygulaması.",
-    fullDescription: "Bu alana proje hakkında daha detaylı açıklama gelecek.",
-    github: "#",
+    images: [
+      "/assets/dotnet.jpg",
+      "/assets/dotnet1.jpeg",
+      "/assets/dotnet2.jpg",
+    ],
+    shortDescription:
+      "ASP.NET Core Web API ile geliştirilen katmanlı mimariye sahip bir rent-a-car backend projesi.",
+
+    fullDescription:
+      ".NetBackendProject, ASP.NET Core Web API (.NET 6) kullanılarak geliştirilmiş, katmanlı mimariye sahip güçlü bir backend altyapısıdır. Temiz kod prensipleri, sürdürülebilirlik ve genişletilebilirlik ön planda tutularak yapılandırılmıştır. Proje, bir rent-a-car (araç kiralama) şirketi örneği üzerinden modellenmiş olup, eğitim, geliştirme veya hızlı başlangıç amaçlarıyla idealdir. Repository, Entity, Service ve Controller katmanlarını içeren yapısıyla backend geliştirme konusunda rehber niteliğindedir.",
+
+    github: "https://github.com/ebrarkadir/.NetBackendProject",
+    demo: "#",
+  },
+  {
+    id: 6,
+    title: "Ip_port_scan",
+    image: "/assets/scan.png",
+    shortDescription:
+      "Go ile geliştirilen, düşük seviyeli TCP SYN tabanlı port tarama aracı.",
+
+    fullDescription:
+      "Bu proje, Go programlama dili ile geliştirilmiş, düşük seviyeli TCP SYN taraması gerçekleştiren bir port tarama aracıdır. Gopacket ve pcap kütüphaneleri kullanılarak özel TCP SYN paketleri oluşturulur ve hedef IP adresine gönderilir. Gelen cevaplara göre portların açık ya da kapalı olduğu belirlenir. Bu yöntem, klasik connect() temelli tarayıcılardan farklı olarak, nmap’in -sS parametresinde kullandığı half-open scan (yarı-açık tarama) yaklaşımına benzer bir şekilde çalışır. Güvenlik araştırmaları ve ağ analizleri için güçlü bir araçtır.",
+
+    github: "https://github.com/ebrarkadir/Ip_Port_Scan",
     demo: "#",
   },
   {
     id: 5,
     title: "Tcp_server_client",
     image: "/assets/tcp.png",
-    shortDescription: "TCP üzerinden haberleşen istemci-sunucu uygulaması.",
-    fullDescription: "Bu alana proje hakkında daha detaylı açıklama gelecek.",
-    github: "#",
-    demo: "#",
-  },
-  {
-    id: 6,
-    title: "Ip_port_scan",
-    image: "/assets/scan.jpg",
-    shortDescription: "Ağ tarama aracı - IP ve port tespiti.",
-    fullDescription: "Bu alana proje hakkında daha detaylı açıklama gelecek.",
-    github: "#",
+    shortDescription:
+      "Go dili ile geliştirilmiş, özel protokol kullanan TCP istemci-sunucu haberleşme uygulaması.",
+
+    fullDescription:
+      "Bu proje, Go programlama dili ile geliştirilmiş bir TCP sunucu-istemci uygulamasıdır. Uygulama, iki uç arasında veri iletimini sağlamak için özel olarak tasarlanmış bir binary protokol kullanır. Sistem performansını artırmak ve verimliliği maksimize etmek amacıyla çeşitli optimizasyon teknikleri entegre edilmiştir. Özellikle düşük seviye haberleşme, ağ programlama ve sistem geliştirme alanlarında öğrenim ve deneyim kazanmak isteyenler için ideal bir projedir.",
+
+    github: "https://github.com/ebrarkadir/TCP_server-client",
     demo: "#",
   },
   {
