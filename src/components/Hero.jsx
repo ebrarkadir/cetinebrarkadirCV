@@ -9,7 +9,7 @@ const Hero = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowArrow(window.scrollY < 230);
+      setShowArrow(window.scrollY < 200);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -18,7 +18,7 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="relative min-h-screen bg-gradient-to-b from-black to-gray-900 text-white flex flex-col-reverse md:flex-row items-center justify-center px-6 md:px-20 py-12 gap-12"
+      className="relative min-h-screen bg-gradient-to-b from-black to-gray-900 text-white flex flex-col-reverse md:flex-row items-center justify-center px-6 md:px-20 py-24 gap-12"
     >
       {/* Yazı */}
       <motion.div
@@ -72,13 +72,13 @@ const Hero = () => {
         <img
           src={profileImage}
           alt="Ebrar Kadir"
-          className="w-64 h-64 md:w-80 md:h-80 rounded-full shadow-lg object-cover border-4 border-green-500"
+          className="w-64 h-64 md:w-80 md:h-80 rounded-full shadow-lg object-cover border-4 border-green-500 mt-4"
         />
       </motion.div>
 
       {showArrow && (
         <motion.div
-          className="absolute bottom-20 left-1/2 transform -translate-x-1/2 mt-6"
+          className="absolute bottom-24 left-1/2 transform -translate-x-1/2 mt-6"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: [10, 20, 10] }}
           transition={{ duration: 2, repeat: Infinity }}
