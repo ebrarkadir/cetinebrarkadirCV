@@ -9,9 +9,9 @@ const skills = [
   "React",
   "Node.js",
   "Express",
-  "Docker",
-  "Go",
   "Python",
+  "Go",
+  "Docker",
   "MongoDB",
   "MSSQL",
   
