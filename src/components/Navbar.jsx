@@ -61,31 +61,29 @@ const Navbar = () => {
 
       {/* Mobile Menu Slide-In */}
       {menuOpen && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-80 flex justify-end">
-          <div className="w-3/4 sm:w-1/2 bg-gray-900 h-full p-6 flex flex-col gap-6">
-            <button
-              onClick={() => setMenuOpen(false)}
-              className="self-end text-white text-2xl hover:text-red-500"
-            >
-              <FaTimes />
-            </button>
-            <ul className="flex flex-col gap-4 mt-8">
-              {links.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.to}
-                    smooth={true}
-                    duration={500}
-                    offset={-60}
-                    className="block text-lg text-gray-200 hover:text-green-400 cursor-pointer"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="fixed inset-0 z-50 bg-black/90 flex flex-col justify-center items-center">
+          <button
+            onClick={() => setMenuOpen(false)}
+            className="absolute top-6 right-6 text-white text-3xl hover:text-red-500"
+          >
+            <FaTimes />
+          </button>
+          <ul className="flex flex-col gap-6 text-lg text-white">
+            {links.map((link) => (
+              <li key={link.name}>
+                <Link
+                  to={link.to}
+                  smooth={true}
+                  duration={500}
+                  offset={-60}
+                  className="hover:text-green-400 cursor-pointer"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </motion.nav>

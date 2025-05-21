@@ -6,6 +6,17 @@
   user-select: none;
   caret-color: transparent;
 }
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif; /* varsayılan font */
+}
+
+* {
+  box-sizing: border-box;
+}
 
 
 .App-logo {
