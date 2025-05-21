@@ -9,7 +9,7 @@ const Hero = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowArrow(window.scrollY < 200);
+      setShowArrow(window.scrollY < 230);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -31,7 +31,8 @@ const Hero = () => {
           Merhaba, ben Ebrar Kadir Çetin
         </h1>
         <p className="text-lg md:text-xl text-gray-300 mb-6">
-          Bilgisayar Mühendisi | Full Stack Web Geliştirici | Network Geliştirici | Siber Güvenlik Meraklısı
+          Bilgisayar Mühendisi | Full Stack Web Geliştirici | Network
+          Geliştirici | Siber Güvenlik Meraklısı
         </p>
 
         <motion.a
@@ -75,10 +76,9 @@ const Hero = () => {
         />
       </motion.div>
 
-      {/* Aşağı Ok */}
       {showArrow && (
         <motion.div
-          className="absolute bottom-6 left-1/2 transform -translate-x-1/2 mt-6"
+          className="absolute bottom-20 left-1/2 transform -translate-x-1/2 mt-6"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: [10, 20, 10] }}
           transition={{ duration: 2, repeat: Infinity }}
