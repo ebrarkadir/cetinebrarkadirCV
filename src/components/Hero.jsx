@@ -27,17 +27,17 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 text-green-400">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 text-green-400">
           Merhaba, ben Ebrar Kadir Çetin
         </h1>
-        <p className="text-lg md:text-xl text-gray-300 mb-6">
+        <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6">
           Bilgisayar Mühendisi | Full Stack Web Geliştirici | Network
           Geliştirici | Siber Güvenlik Meraklısı
         </p>
 
         <motion.a
           href="#projects"
-          className="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl text-lg transition-all"
+          className="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl text-base md:text-lg transition-all"
           whileHover={{ scale: 1.05 }}
         >
           Projelerime Göz At
@@ -72,13 +72,14 @@ const Hero = () => {
         <img
           src={profileImage}
           alt="Ebrar Kadir"
-          className="w-64 h-64 md:w-80 md:h-80 rounded-full shadow-lg object-cover border-4 border-green-500 mt-4"
+          className="w-44 h-44 sm:w-56 sm:h-56 md:w-80 md:h-80 rounded-full shadow-lg object-cover border-4 border-green-500 mt-4"
         />
       </motion.div>
 
+      {/* Aşağı Ok */}
       {showArrow && (
         <motion.div
-          className="absolute bottom-24 left-1/2 transform -translate-x-1/2 mt-6"
+          className="absolute bottom-10 sm:bottom-16 left-1/2 transform -translate-x-1/2"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: [10, 20, 10] }}
           transition={{ duration: 2, repeat: Infinity }}
