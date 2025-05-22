@@ -1,17 +1,24 @@
-// src/components/Projects.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import projects from "../data/projectsData";
 
 const Projects = () => {
   const [selected, setSelected] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 5;
   const [slideIndex, setSlideIndex] = useState(0);
 
+  const itemsPerPage = 5;
   const totalPages = Math.ceil(projects.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentProjects = projects.slice(startIndex, startIndex + itemsPerPage);
+
+  // Sayfa değiştiğinde otomatik yukarı kaydır
+  useEffect(() => {
+    const section = document.getElementById("projects");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [currentPage]);
 
   const handlePrev = (imagesLength) => {
     setSlideIndex((prev) => (prev - 1 + imagesLength) % imagesLength);
@@ -58,16 +65,30 @@ const Projects = () => {
             transition={{ duration: 0.4 }}
             viewport={{ once: false, amount: 0.2 }}
           >
-            <div className="relative" onClick={() => setSelected(project)}>
+            <div
+              className="relative"
+              onClick={() => {
+                setSelected(project);
+                setSlideIndex(0);
+              }}
+            >
               <img
                 src={project.images ? project.images[0] : project.image}
                 alt={project.title}
                 className="w-full h-48 object-cover object-top"
               />
-              <div className="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition flex items-center justify-center text-green-400 font-semibold text-lg">
+
+              
+              <div className="hidden md:flex absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition items-center justify-center text-green-400 font-semibold text-lg">
                 Detayları Gör
               </div>
+
+              
+              <div className="md:hidden bg-[rgba(0,0,0,0.4)] text-center text-green-400 py-2 text-sm font-medium">
+                Detayları görmek için dokunun
+              </div>
             </div>
+
             <div className="p-4">
               <h3 className="text-xl font-bold text-green-400 mb-2">
                 {project.title}
@@ -111,7 +132,7 @@ const Projects = () => {
         </button>
       </div>
 
-      {/* Modal */}
+      {/* Modal (Pop-up) */}
       {selected && (
         <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center px-4">
           <div className="bg-gray-900 rounded-lg w-full max-w-5xl max-h-[95vh] overflow-y-auto relative p-6 shadow-xl">
@@ -121,7 +142,7 @@ const Projects = () => {
             >
               ✕
             </button>
-            {/* Slider */}
+
             {selected.images && selected.images.length > 1 ? (
               <div className="relative">
                 <img
@@ -131,13 +152,13 @@ const Projects = () => {
                 />
                 <button
                   onClick={() => handlePrev(selected.images.length)}
-                  className="absolute left-2 top-1/2 transform -translate-y-1/2 text-white text-2xl"
+                  className="absolute left-2 top-1/2 transform -translate-y-1/2 text-green-400 text-4xl"
                 >
                   ◀
                 </button>
                 <button
                   onClick={() => handleNext(selected.images.length)}
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white text-2xl"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 text-green-400 text-4xl"
                 >
                   ▶
                 </button>
@@ -186,7 +207,7 @@ const Projects = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true, amount: 0.4 }}
       >
-        Bu projelerin detaylarına ve daha fazlasına {" "}
+        Bu projelerin detaylarına ve daha fazlasına{" "}
         <a
           href="https://github.com/ebrarkadir"
           target="_blank"
