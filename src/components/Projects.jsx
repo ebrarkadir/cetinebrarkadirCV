@@ -31,7 +31,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-20 bg-gradient-to-b from-gray-950 to-gray-900 text-white min-h-screen px-6"
+      className="scroll-mt-12 pt-10 pb-20 bg-gradient-to-b from-gray-950 to-gray-900 text-white min-h-screen px-6"
     >
       <motion.h2
         className="text-4xl md:text-5xl font-bold text-green-400 mb-6 text-center"

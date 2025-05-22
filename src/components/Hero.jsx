@@ -79,12 +79,12 @@ const Hero = () => {
       {/* Aşağı Ok */}
       {showArrow && (
         <motion.div
-          className="absolute bottom-10 sm:bottom-16 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-16 inset-x-0 flex justify-center"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: [10, 20, 10] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <FaChevronDown className="text-green-400 text-2xl animate-bounce" />
+          <FaChevronDown className="text-green-400 text-3xl animate-bounce" />
         </motion.div>
       )}
     </div>

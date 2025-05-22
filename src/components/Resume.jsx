@@ -6,7 +6,7 @@ const Resume = () => {
   return (
     <section
       id="resume"
-      className="py-20 px-6 md:px-20 bg-gradient-to-b from-gray-900 to-black text-white min-h-[120vh]"
+       className="scroll-mt-12 pt-10 px-6 md:px-20 bg-gradient-to-b from-gray-900 to-black text-white min-h-[120vh]"
     >
       <motion.h2
         className="text-4xl md:text-5xl font-bold text-green-400 mb-6 text-center"

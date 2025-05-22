@@ -20,7 +20,9 @@ const About = () => {
   return (
     <div
       id="about"
-      className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-white py-16 px-4 sm:px-6 md:px-20"
+      className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-white pt-6 pb-16 px-4 sm:px-6 md:px-20 scroll-mt-14"
+
+
     >
       <motion.h2
         className="text-3xl sm:text-4xl md:text-5xl font-bold text-green-400 mb-6 text-center"
@@ -32,7 +34,8 @@ const About = () => {
       </motion.h2>
 
       <motion.div
-        className="max-w-5xl mx-auto text-sm sm:text-base md:text-lg text-gray-300 mb-10 leading-relaxed text-center"
+        className="max-w-5xl mx-auto text-xs sm:text-sm md:text-lg text-gray-300 mb-10 leading-relaxed text-center"
+
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 1 }}

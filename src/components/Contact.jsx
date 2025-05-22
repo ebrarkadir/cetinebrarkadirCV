@@ -29,7 +29,8 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-20 px-6 md:px-20 bg-gradient-to-b from-black via-gray-900 to-black text-white min-h-screen"
+      className="pt-10 pb-20 px-6 md:px-20 bg-gradient-to-b from-black via-gray-900 to-black text-white min-h-screen scroll-mt-16"
+
     >
       <motion.h2
         className="text-4xl md:text-5xl font-bold text-green-400 mb-6 text-center"
