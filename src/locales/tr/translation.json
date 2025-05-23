@@ -9,6 +9,7 @@
   "aboutDescription3": "Web güvenliği alanında uygulamalı çalışmalar yaptım; özellikle Burp Suite kullanarak SQL Injection, DOM temelli zafiyetler ve diğer zayıflık analizleri üzerine testler gerçekleştirdim.",
   "aboutDescription4": "Kendimi, sadece kod yazmakla kalmayıp altyapı ve güvenlik perspektifiyle de düşünebilen bir geliştirici olarak konumlandırıyorum. Sürekli öğrenen, çözüm odaklı ve sistematik bir yaklaşım benimseyerek yazılım dünyasında kalıcı değerler üretmeyi hedefliyorum.",
 
+  "resume.viewCertificate": "Belgeyi Gör",
   "resume": {
     "title": "Özgeçmiş (CV)",
     "description": "Sürekli gelişen bir mühendis olarak eğitimim, tecrübem ve sertifikalarım burada.",
@@ -106,5 +107,33 @@
         "description": "[Belgeyi Gör](https://www.credly.com/badges/130f0c1b-24bb-4535-ac4d-1a8f5b7b66a6/linked_in_profile)"
       }
     ]
-  }
+    
+  },
+  "contact": {
+    "title": "İletişim",
+    "description": "Birlikte çalışmak, proje önermek ya da sadece selam vermek istersen, aşağıdaki formu doldurabilir veya doğrudan bana ulaşabilirsin.",
+    "name": "Adınız",
+    "email": "E-posta adresiniz",
+    "message": "Mesajınız",
+    "send": "Gönder",
+    "popupTitle": "Mesajınız gönderildi!",
+    "popupDesc": "En kısa sürede sizinle iletişime geçeceğim. Teşekkür ederim 🙌",
+    "popupClose": "Kapat"
+  },
+
+  "footer": {
+  "rights": "Tüm Haklar Saklıdır © {{year}} Ebrar Kadir Çetin",
+  "thanks": "Ziyaretiniz için teşekkür ederim. Görüşmek üzere!",
+  "builtBy": "Hazırlayan:",
+  "name": "Ebrar Kadir"
+},
+"nav": {
+  "home": "Anasayfa",
+  "about": "Hakkımda",
+  "projects": "Projeler",
+  "resume": "Özgeçmiş (CV)",
+  "contact": "İletişim"
+}
+
+
 }

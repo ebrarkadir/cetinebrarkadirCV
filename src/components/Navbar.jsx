@@ -4,17 +4,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
 
-const links = [
-  { name: "Anasayfa", to: "home" },
-  { name: "Hakkımda", to: "about" },
-  { name: "Projeler", to: "projects" },
-  { name: "Özgeçmiş (CV)", to: "resume" },
-  { name: "İletişim", to: "contact" },
-];
-
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
+
+  const links = [
+    { name: "nav.home", to: "home" },
+    { name: "nav.about", to: "about" },
+    { name: "nav.projects", to: "projects" },
+    { name: "nav.resume", to: "resume" },
+    { name: "nav.contact", to: "contact" },
+  ];
 
   return (
     <motion.nav
@@ -45,7 +45,7 @@ const Navbar = () => {
                   offset={-60}
                   className="hover:text-orange-600 transition cursor-pointer"
                 >
-                  {link.name}
+                  {t(link.name)}
                 </Link>
               </li>
             ))}
@@ -104,7 +104,7 @@ const Navbar = () => {
                     className="block text-lg hover:text-orange-600 cursor-pointer"
                     onClick={() => setMenuOpen(false)}
                   >
-                    {link.name}
+                    {t(link.name)}
                   </Link>
                 </li>
               ))}

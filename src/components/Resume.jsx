@@ -3,6 +3,43 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
+const ResumeItem = ({ year, title, place, description, isCertificate }) => {
+  const { t } = useTranslation();
+  const hasLink =
+    isCertificate &&
+    description.includes("http") &&
+    !title.includes("Linux Essentials");
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: false, amount: 0.3 }}
+      className="bg-white/5 rounded-md p-3 shadow-sm hover:shadow-md transition-all text-xs"
+    >
+      <h4 className="font-semibold text-orange-400 mb-1 truncate">{title}</h4>
+      <span className="block text-gray-400 italic mb-1">
+        {place} | {year}
+      </span>
+      <p className="text-gray-300">
+        {hasLink ? (
+          <a
+            href={description.match(/\((.*?)\)/)?.[1] || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-3 py-1 rounded"
+          >
+            {t("resume.viewCertificate")}
+          </a>
+        ) : (
+          description.replace(/\[.*?\]\(.*?\)/, "")
+        )}
+      </p>
+    </motion.div>
+  );
+};
+
 const Resume = () => {
   const { t } = useTranslation();
   const educationData = t("resume.educationData", { returnObjects: true });
@@ -47,7 +84,6 @@ const Resume = () => {
       </motion.p>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Eğitim */}
         <div>
           <h3 className="text-xl font-bold text-orange-500 mb-4 text-center border-b border-orange-700 pb-2">
             🎓 {t("resume.education")}
@@ -59,7 +95,6 @@ const Resume = () => {
           </div>
         </div>
 
-        {/* Deneyim */}
         <div>
           <h3 className="text-xl font-bold text-orange-500 mb-4 text-center border-b border-orange-700 pb-2">
             🧑‍💻 {t("resume.experience")}
@@ -71,7 +106,6 @@ const Resume = () => {
           </div>
         </div>
 
-        {/* Sertifikalar */}
         <div>
           <h3 className="text-xl font-bold text-orange-500 mb-4 text-center border-b border-orange-700 pb-2">
             📜 {t("resume.certificates")}
@@ -84,42 +118,6 @@ const Resume = () => {
         </div>
       </div>
     </section>
-  );
-};
-
-const ResumeItem = ({ year, title, place, description, isCertificate }) => {
-  const hasLink =
-    isCertificate &&
-    description.includes("http") &&
-    !title.includes("Linux Essentials");
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: false, amount: 0.3 }}
-      className="bg-white/5 rounded-md p-3 shadow-sm hover:shadow-md transition-all text-xs"
-    >
-      <h4 className="font-semibold text-orange-400 mb-1 truncate">{title}</h4>
-      <span className="block text-gray-400 italic mb-1">
-        {place} | {year}
-      </span>
-      <p className="text-gray-300">
-        {hasLink ? (
-          <a
-            href={description.match(/\((.*?)\)/)?.[1] || "#"}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-3 py-1 rounded"
-          >
-            View Certificate
-          </a>
-        ) : (
-          description.replace(/\[.*?\]\(.*?\)/, "")
-        )}
-      </p>
-    </motion.div>
   );
 };
 
