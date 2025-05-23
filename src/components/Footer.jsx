@@ -16,7 +16,7 @@ const Footer = () => {
 
         <p className="text-sm mb-4">{t("footer.thanks")}</p>
 
-        <div className="flex justify-center items-center gap-2 text-orange-500 text-sm">
+        <div className="flex justify-center items-center gap-2 text-teal-500 text-sm">
           <span>{t("footer.builtBy")}</span>
           <FaLaptopCode className="text-xl" />
           <span>{t("footer.name")}</span>

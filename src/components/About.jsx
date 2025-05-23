@@ -27,7 +27,7 @@ const About = () => {
       className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-white pt-6 pb-16 px-4 sm:px-6 md:px-20 scroll-mt-14"
     >
       <motion.h2
-        className="text-4xl md:text-5xl font-bold text-orange-500 mb-6 text-center"
+        className="text-4xl md:text-5xl font-bold text-teal-500 mb-6 text-center"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -64,7 +64,7 @@ const About = () => {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="w-[22%] min-w-[70px] bg-gray-800 hover:bg-orange-700 transition rounded-xl p-2 text-center text-white text-sm font-semibold shadow-md"
+            className="w-[22%] min-w-[70px] bg-gray-800 hover:bg-teal-700 transition rounded-xl p-2 text-center text-white text-sm font-semibold shadow-md"
           >
             {skill}
           </div>

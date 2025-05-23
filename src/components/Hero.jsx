@@ -29,7 +29,7 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 text-orange-600">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 text-teal-600">
           {t("hero_title")}
         </h1>
         <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6">
@@ -38,7 +38,7 @@ const Hero = () => {
 
         <motion.a
           href="#projects"
-          className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-xl text-base md:text-lg transition-all"
+          className="inline-block bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-xl text-base md:text-lg transition-all"
           whileHover={{ scale: 1.05 }}
         >
           {t("hero_button")}
@@ -51,14 +51,14 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGithub className="text-orange-600 hover:text-orange-600 text-2xl transition-all" />
+            <FaGithub className="text-teal-600 hover:text-teal-600 text-2xl transition-all" />
           </a>
           <a
             href="https://www.linkedin.com/in/ebrar-kadir-%C3%A7etin-1a728019b/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedin className="text-orange-600 hover:text-orange-600 text-2xl transition-all" />
+            <FaLinkedin className="text-teal-600 hover:text-teal-600 text-2xl transition-all" />
           </a>
         </div>
       </motion.div>
@@ -73,7 +73,7 @@ const Hero = () => {
         <img
           src={profileImage}
           alt="Ebrar Kadir"
-          className="w-44 h-44 sm:w-56 sm:h-56 md:w-80 md:h-80 rounded-full shadow-lg object-cover border-4 border-orange-600 mt-4"
+          className="w-44 h-44 sm:w-56 sm:h-56 md:w-80 md:h-80 rounded-full shadow-lg object-cover border-4 border-teal-600 mt-4"
         />
       </motion.div>
 
@@ -85,7 +85,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: [10, 20, 10] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <FaChevronDown className="text-orange-600 text-3xl animate-bounce" />
+          <FaChevronDown className="text-teal-600 text-3xl animate-bounce" />
         </motion.div>
       )}
     </div>

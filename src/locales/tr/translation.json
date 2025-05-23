@@ -9,6 +9,20 @@
   "aboutDescription3": "Web güvenliği alanında uygulamalı çalışmalar yaptım; özellikle Burp Suite kullanarak SQL Injection, DOM temelli zafiyetler ve diğer zayıflık analizleri üzerine testler gerçekleştirdim.",
   "aboutDescription4": "Kendimi, sadece kod yazmakla kalmayıp altyapı ve güvenlik perspektifiyle de düşünebilen bir geliştirici olarak konumlandırıyorum. Sürekli öğrenen, çözüm odaklı ve sistematik bir yaklaşım benimseyerek yazılım dünyasında kalıcı değerler üretmeyi hedefliyorum.",
 
+  "projects": {
+    "title": "Projelerim",
+    "description": "İşte bugüne kadar geliştirdiğim, her biri kendi alanında özgün çözümler sunan projelerim.",
+    "seeDetails": "Detayları Gör",
+    "tapToView": "Detayları görmek için dokunun",
+    "previous": "← Önceki",
+    "next": "Sonraki →",
+    "githubNote": "Bu projelerin detaylarına ve daha fazlasına",
+    "githubLink": "GitHub profilimden",
+    "githubSuffix": " ulaşabilirsiniz.",
+    "github": "GitHub",
+    "demo": "Demo"
+  },
+  
   "resume.viewCertificate": "Belgeyi Gör",
   "resume": {
     "title": "Özgeçmiş (CV)",

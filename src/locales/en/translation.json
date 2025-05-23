@@ -9,6 +9,20 @@
   "aboutDescription3": "I have conducted practical studies in the field of web security, especially testing for SQL Injection, DOM-based vulnerabilities, and other weaknesses using Burp Suite.",
   "aboutDescription4": "I position myself as a developer who not only writes code but also thinks with an infrastructure and security perspective. I aim to create lasting value in the software world by adopting a constantly learning, solution-oriented, and systematic approach.",
 
+  
+  "projects": {
+    "title": "My Projects",
+    "description": "Here are the projects I've developed so far, each offering unique solutions in its domain.",
+    "seeDetails": "View Details",
+    "tapToView": "Tap to see details",
+    "previous": "← Previous",
+    "next": "Next →",
+    "githubNote": "You can access details of these projects and more on my",
+    "githubLink": "GitHub profile",
+    "githubSuffix": ".",
+    "github": "GitHub",
+    "demo": "Demo"
+  },
   "resume.viewCertificate": "View Certificate",
   "resume.title": "Resume (CV)",
   "resume.description": "As a continuously evolving engineer, here are my education, experience, and certifications.",
