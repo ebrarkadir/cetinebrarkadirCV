@@ -9,7 +9,7 @@ const Resume = () => {
        className="scroll-mt-12 pt-10 px-6 md:px-20 bg-gradient-to-b from-gray-900 to-black text-white min-h-[120vh]"
     >
       <motion.h2
-        className="text-4xl md:text-5xl font-bold text-green-400 mb-6 text-center"
+        className="text-4xl md:text-5xl font-bold text-orange-600 mb-6 text-center"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -29,7 +29,7 @@ const Resume = () => {
       </motion.p>
 
       <motion.p
-        className="text-center text-green-400 underline hover:text-green-300 mb-12 text-sm md:text-base"
+        className="text-center text-orange-500 underline hover:text-orange-700 mb-12 text-sm md:text-base"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
@@ -43,7 +43,7 @@ const Resume = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Eğitim */}
         <div>
-          <h3 className="text-xl font-bold text-green-300 mb-4 text-center border-b border-green-500 pb-2">
+          <h3 className="text-xl font-bold text-orange-500 mb-4 text-center border-b border-orange-700 pb-2">
             🎓 Eğitim
           </h3>
           <div className="space-y-4">
@@ -55,7 +55,7 @@ const Resume = () => {
 
         {/* Deneyim */}
         <div>
-          <h3 className="text-xl font-bold text-green-300 mb-4 text-center border-b border-green-500 pb-2">
+          <h3 className="text-xl font-bold text-orange-500 mb-4 text-center border-b border-orange-700 pb-2">
             🧑‍💻 Deneyim
           </h3>
           <div className="space-y-4">
@@ -67,7 +67,7 @@ const Resume = () => {
 
         {/* Sertifikalar */}
         <div>
-          <h3 className="text-xl font-bold text-green-300 mb-4 text-center border-b border-green-500 pb-2">
+          <h3 className="text-xl font-bold text-orange-500 mb-4 text-center border-b border-orange-700 pb-2">
             📜 Sertifikalar
           </h3>
           <div className="space-y-3">
@@ -95,7 +95,7 @@ const ResumeItem = ({ year, title, place, description, isCertificate }) => {
       viewport={{ once: false, amount: 0.3 }}
       className="bg-white/5 rounded-md p-3 shadow-sm hover:shadow-md transition-all text-xs"
     >
-      <h4 className="font-semibold text-green-400 mb-1 truncate">{title}</h4>
+      <h4 className="font-semibold text-orange-400 mb-1 truncate">{title}</h4>
       <span className="block text-gray-400 italic mb-1">
         {place} | {year}
       </span>
@@ -105,7 +105,7 @@ const ResumeItem = ({ year, title, place, description, isCertificate }) => {
             href={description.match(/\((.*?)\)/)?.[1] || "#"}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded"
+            className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-3 py-1 rounded"
           >
             Belgeyi Gör
           </a>

@@ -27,7 +27,7 @@ const Navbar = () => {
           smooth={true}
           duration={500}
           offset={-60}
-          className="text-2xl font-bold text-green-400 cursor-pointer flex items-center gap-2"
+          className="text-2xl font-bold text-orange-600 cursor-pointer flex items-center gap-2"
         >
           <span className="text-xl">&lt;/&gt;</span> Ebrar Kadir
         </Link>
@@ -40,7 +40,7 @@ const Navbar = () => {
                 smooth={true}
                 duration={500}
                 offset={-60}
-                className="hover:text-green-400 transition cursor-pointer"
+                className="hover:text-orange-600 transition cursor-pointer"
               >
                 {link.name}
               </Link>
@@ -73,7 +73,7 @@ const Navbar = () => {
                     smooth={true}
                     duration={500}
                     offset={-60}
-                    className="block text-lg hover:text-green-400 cursor-pointer"
+                    className="block text-lg hover:text-orange-600 cursor-pointer"
                     onClick={() => setMenuOpen(false)}
                   >
                     {link.name}

@@ -4,8 +4,10 @@ const projects = [
     id: 1,
     title: "ShiledWrt",
     image: "/assets/shieldwrt.png",
-    shortDescription: "OpenWRT tabanlı güvenlik duvarı projesi.",
-    fullDescription: "Bu alana proje hakkında daha detaylı açıklama gelecek.",
+    shortDescription:
+      "OpenWRT destekli Raspberry Pi cihazı üzerinden firewall yönetimi sağlayan, React arayüzlü ve Node.js API tabanlı modern güvenlik çözümü.",
+    fullDescription:
+      "ShieldWrt, React ile geliştirilen kullanıcı dostu bir arayüz ve Node.js ile oluşturulmuş bir API altyapısıyla entegre çalışan, gerçek zamanlı firewall yönetimi sağlayan bir güvenlik çözümüdür. Kullanıcılar arayüz üzerinden özel kurallar tanımlayabilir; bu kurallar backend aracılığıyla OpenWRT işletim sistemine sahip Raspberry Pi cihazına iletilerek orada firewall yapılandırmalarına dönüştürülür ve uygulanır. Sistem, hem yönlendirici (router) hem de güvenlik duvarı (firewall) görevini üstlenen Raspberry Pi üzerinde aktif olarak çalışmaktadır. Bu proje sayesinde ağ güvenliği, kuralların otomatik yönetimi, API tasarımı ve gömülü sistemlerle entegrasyon konularında deneyim kazandım. Gerçek donanım üzerinde çalışan uçtan uca bir ağ güvenlik çözümüdür.",
     github: "#",
     demo: "#",
   },
@@ -32,21 +34,6 @@ const projects = [
   },
   {
     id: 3,
-    title: "FoodDB",
-    images: [
-      "/assets/fooddb.png",
-      "/assets/fooddb1.png",
-      "/assets/fooddb2.png",
-    ],
-    shortDescription:
-      "FoodDb, React-Next.js kullanılarak yazılmış bir restoran yemek sipariş projesi.",
-    fullDescription:
-      " foodDB adlı yemek sipariş sitemiz, kullanıcıları ve restoranları doğrudan bir araya getirmek için tasarlanmıştır.Piyasadaki diğer yemek sipariş platformlarının aksine, aracı kurum olmadan kullanıcıları ve restoranları buluşturmayı amaçlamaktadır. Bu yaklaşım, yüksek komisyon ücretlerini ortadan kaldırarak kullanıcıların daha uygun fiyatlarla yemek siparişi vermelerini sağlarken, restoranların da aracı kuruluşlara komisyon ödemeden ürünlerini sergilemelerine imkan tanır..",
-    github: "https://github.com/ebrarkadir/FoodDB",
-    demo: "#",
-  },
-  {
-    id: 4,
     title: ".NET Backend Project",
     images: [
       "/assets/dotnet3.jpg",
@@ -63,6 +50,20 @@ const projects = [
     demo: "#",
   },
   {
+    id: 4,
+    title: "Ip_port_scan",
+    image: "/assets/scan.png",
+    shortDescription:
+      "Go ile geliştirilen, düşük seviyeli TCP SYN tabanlı port tarama aracı.",
+
+    fullDescription:
+      "Bu proje, Go programlama dili ile geliştirilmiş, düşük seviyeli TCP SYN taraması gerçekleştiren bir port tarama aracıdır. Gopacket ve pcap kütüphaneleri kullanılarak özel TCP SYN paketleri oluşturulur ve hedef IP adresine gönderilir. Gelen cevaplara göre portların açık ya da kapalı olduğu belirlenir. Bu yöntem, klasik connect() temelli tarayıcılardan farklı olarak, nmap’in -sS parametresinde kullandığı half-open scan (yarı-açık tarama) yaklaşımına benzer bir şekilde çalışır. Güvenlik araştırmaları ve ağ analizleri için güçlü bir araçtır.",
+
+    github: "https://github.com/ebrarkadir/Ip_Port_Scan",
+    demo: "#",
+  },
+
+  {
     id: 5,
     title: "Tcp_server_client",
     image: "/assets/tcp.png",
@@ -77,15 +78,17 @@ const projects = [
   },
   {
     id: 6,
-    title: "Ip_port_scan",
-    image: "/assets/scan.png",
+    title: "FoodDB",
+    images: [
+      "/assets/fooddb.png",
+      "/assets/fooddb1.png",
+      "/assets/fooddb2.png",
+    ],
     shortDescription:
-      "Go ile geliştirilen, düşük seviyeli TCP SYN tabanlı port tarama aracı.",
-
+      "FoodDb, React-Next.js kullanılarak yazılmış bir restoran yemek sipariş projesi.",
     fullDescription:
-      "Bu proje, Go programlama dili ile geliştirilmiş, düşük seviyeli TCP SYN taraması gerçekleştiren bir port tarama aracıdır. Gopacket ve pcap kütüphaneleri kullanılarak özel TCP SYN paketleri oluşturulur ve hedef IP adresine gönderilir. Gelen cevaplara göre portların açık ya da kapalı olduğu belirlenir. Bu yöntem, klasik connect() temelli tarayıcılardan farklı olarak, nmap’in -sS parametresinde kullandığı half-open scan (yarı-açık tarama) yaklaşımına benzer bir şekilde çalışır. Güvenlik araştırmaları ve ağ analizleri için güçlü bir araçtır.",
-
-    github: "https://github.com/ebrarkadir/Ip_Port_Scan",
+      " foodDB adlı yemek sipariş sitemiz, kullanıcıları ve restoranları doğrudan bir araya getirmek için tasarlanmıştır.Piyasadaki diğer yemek sipariş platformlarının aksine, aracı kurum olmadan kullanıcıları ve restoranları buluşturmayı amaçlamaktadır. Bu yaklaşım, yüksek komisyon ücretlerini ortadan kaldırarak kullanıcıların daha uygun fiyatlarla yemek siparişi vermelerini sağlarken, restoranların da aracı kuruluşlara komisyon ödemeden ürünlerini sergilemelerine imkan tanır..",
+    github: "https://github.com/ebrarkadir/FoodDB",
     demo: "#",
   },
   {
@@ -97,9 +100,11 @@ const projects = [
       "/assets/location2.png",
       "/assets/location3.png",
     ],
-    shortDescription: "Gerçek zamanlı konum paylaşma uygulaması.",
-    fullDescription: "Bu alana proje hakkında daha detaylı açıklama gelecek.",
-    github: "#",
+    shortDescription:
+      "JWT doğrulamalı, konum paylaşımı ve kullanıcı yönetimi özelliklerine sahip React tabanlı etkileşimli lokasyon platformu.",
+    fullDescription:
+      "ShareLocation, React ile geliştirilmiş ve bir backend servisiyle entegre çalışan, kullanıcıların konumlarını paylaşabildiği bir web uygulamasıdır. Kullanıcılar konum ekleyebilir, bu konumlara başlık ve açıklama yazabilir, harita üzerinden güncelleyebilir ve tüm lokasyonları topluca görüntüleyebilir. Uygulama, kullanıcı kimlik doğrulaması için JWT sistemi kullanır ve güvenlik odaklı bir oturum yönetimi yapısına sahiptir. React Router ile çok sayfalı yapı, useContext ve özel hook'lar ile yetki kontrolü, lazy loading ile performans iyileştirmeleri sağlanmıştır. Bu proje, gerçek dünya senaryolarında kullanıcı yönetimi, form işlemleri ve API entegrasyonu konularında deneyim kazanmamı sağladı.",
+    github: "https://github.com/ebrarkadir/FRONTEND",
     demo: "#",
   },
   {
@@ -107,7 +112,6 @@ const projects = [
     title: "OnlineExamSystem",
     images: [
       "/assets/boiler.jpeg",
-      "/assets/boiler1.jpeg",
       "/assets/boiler2.jpeg",
       "/assets/boiler3.jpeg",
       "/assets/boiler4.jpeg",
@@ -137,21 +141,6 @@ const projects = [
   },
   {
     id: 10,
-    title: "WeatherWebsite",
-    images: [
-      "/assets/weather.jpeg",
-      "/assets/weather1.jpeg",
-      "/assets/weather2.jpeg",
-    ],
-    shortDescription:
-      "Şehir adıyla hava durumu bilgisi sunan ASP.NET Core MVC uygulaması.",
-    fullDescription:
-      "WeatherWebsite, kullanıcıların şehir adı girerek hava durumu bilgilerini öğrenebildiği bir ASP.NET Core MVC uygulamasıdır. Dış bir hava durumu API'sinden veri çekerek kullanıcılara anlık sıcaklık, nem ve rüzgar gibi bilgileri sunar. Eğitim ve geliştirme amacıyla hazırlanmış, sade ve genişletilebilir bir boilerplate projedir. Bu proje sayesinde API tüketimi, veri modelleme ve kullanıcı arayüzü ile veri sunumu gibi temel beceriler üzerinde pratik yapma fırsatı buldum.",
-    github: "https://github.com/ebrarkadir/WeatherWebsite",
-    demo: "#",
-  },
-  {
-    id: 11,
     title: "OnlineExam",
     images: [
       "/assets/oe.jpeg",
@@ -166,7 +155,33 @@ const projects = [
     github: "https://github.com/ebrarkadir/onlineExamination",
     demo: "https://ebrarkadir.github.io/portfolio/",
   },
+  {
+    id: 11,
+    title: "MekanBul",
+    images: ["/assets/mekan.png", "/assets/mekan1.png", "/assets/mekan2.png"],
+    shortDescription:
+      "React ile geliştirilen, kullanıcıların mekan ekleyip puanlayabildiği etkileşimli bir mekan keşif platformu.",
+    fullDescription:
+      "MekanBul, React kullanılarak geliştirilen interaktif bir mekan paylaşım ve değerlendirme platformudur. Kullanıcılar ziyaret ettikleri mekanları sisteme ekleyebilir, diğer kullanıcıların eklediği mekanlara puan vererek öneride bulunabilir. Uygulamanın temel amacı, kullanıcı deneyimini merkeze alan bir arayüzle React konusundaki bilgi ve yetkinliğimi artırmaktı. Bu proje sayesinde component yapısı, props, state yönetimi ve kullanıcı etkileşimlerini yönetme gibi React’in temel yapı taşlarını uygulamalı olarak öğrendim.",
+    github: "https://github.com/ebrarkadir/mekan-bul",
+    demo: "#",
+  },
 
+  {
+    id: 12,
+    title: "WeatherWebsite",
+    images: [
+      "/assets/weather.jpeg",
+      "/assets/weather1.jpeg",
+      "/assets/weather2.jpeg",
+    ],
+    shortDescription:
+      "Şehir adıyla hava durumu bilgisi sunan ASP.NET Core MVC uygulaması.",
+    fullDescription:
+      "WeatherWebsite, kullanıcıların şehir adı girerek hava durumu bilgilerini öğrenebildiği bir ASP.NET Core MVC uygulamasıdır. Dış bir hava durumu API'sinden veri çekerek kullanıcılara anlık sıcaklık, nem ve rüzgar gibi bilgileri sunar. Eğitim ve geliştirme amacıyla hazırlanmış, sade ve genişletilebilir bir boilerplate projedir. Bu proje sayesinde API tüketimi, veri modelleme ve kullanıcı arayüzü ile veri sunumu gibi temel beceriler üzerinde pratik yapma fırsatı buldum.",
+    github: "https://github.com/ebrarkadir/WeatherWebsite",
+    demo: "#",
+  },
 ];
 
 export default projects;

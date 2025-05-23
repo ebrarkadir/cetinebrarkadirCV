@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+// src/components/Projects.jsx
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import projects from "../data/projectsData";
 
@@ -6,19 +7,20 @@ const Projects = () => {
   const [selected, setSelected] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [slideIndex, setSlideIndex] = useState(0);
+  const [fullscreenImage, setFullscreenImage] = useState(null);
 
-  const itemsPerPage = 5;
+  const itemsPerPage = 4;
   const totalPages = Math.ceil(projects.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentProjects = projects.slice(startIndex, startIndex + itemsPerPage);
 
-  // Sayfa değiştiğinde otomatik yukarı kaydır
-  useEffect(() => {
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
     const section = document.getElementById("projects");
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  }, [currentPage]);
+  };
 
   const handlePrev = (imagesLength) => {
     setSlideIndex((prev) => (prev - 1 + imagesLength) % imagesLength);
@@ -31,10 +33,10 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="scroll-mt-12 pt-10 pb-20 bg-gradient-to-b from-gray-950 to-gray-900 text-white min-h-screen px-6"
+      className="py-20 bg-gradient-to-b from-gray-950 to-gray-900 text-white min-h-screen px-6"
     >
       <motion.h2
-        className="text-4xl md:text-5xl font-bold text-green-400 mb-6 text-center"
+        className="text-4xl md:text-5xl font-bold text-orange-500 mb-6 text-center"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -50,15 +52,14 @@ const Projects = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        İşte bugüne kadar geliştirdiğim, her biri kendi alanında özgün çözümler
-        sunan projelerim.
+        İşte bugüne kadar geliştirdiğim, her biri kendi alanında özgün çözümler sunan projelerim.
       </motion.p>
 
-      <div className="flex flex-wrap justify-center gap-6">
+      <div className="flex flex-wrap justify-center gap-4 md:gap-6">
         {currentProjects.map((project) => (
           <motion.div
             key={project.id}
-            className="w-full sm:w-[280px] md:w-[320px] bg-white/5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden shadow-xl cursor-pointer hover:scale-[1.03] transition"
+            className="w-full sm:w-[45%] md:w-[22%] bg-white/5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden shadow-xl cursor-pointer hover:scale-[1.03] transition"
             whileHover={{ scale: 1.03 }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -77,20 +78,15 @@ const Projects = () => {
                 alt={project.title}
                 className="w-full h-48 object-cover object-top"
               />
-
-              
-              <div className="hidden md:flex absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition items-center justify-center text-green-400 font-semibold text-lg">
+              <div className="hidden md:flex absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition items-center justify-center text-orange-400 font-semibold text-lg">
                 Detayları Gör
               </div>
-
-              
-              <div className="md:hidden bg-[rgba(0,0,0,0.4)] text-center text-green-400 py-2 text-sm font-medium">
+              <div className="md:hidden bg-[rgba(0,0,0,0.4)] text-center text-orange-400 py-2 text-sm font-medium">
                 Detayları görmek için dokunun
               </div>
             </div>
-
             <div className="p-4">
-              <h3 className="text-xl font-bold text-green-400 mb-2">
+              <h3 className="text-xl font-bold text-orange-400 mb-2">
                 {project.title}
               </h3>
               <p className="text-sm text-gray-300">
@@ -101,22 +97,21 @@ const Projects = () => {
         ))}
       </div>
 
-      {/* Sayfa Geçişleri */}
       <div className="flex justify-center gap-4 mt-10">
         <button
-          onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
+          onClick={() => handlePageChange(Math.max(currentPage - 1, 1))}
           disabled={currentPage === 1}
-          className="px-4 py-2 rounded bg-green-700 hover:bg-green-800 disabled:opacity-40"
+          className="px-4 py-2 rounded bg-orange-700 hover:bg-orange-800 disabled:opacity-40"
         >
           ← Önceki
         </button>
         {[...Array(totalPages)].map((_, i) => (
           <button
             key={i}
-            onClick={() => setCurrentPage(i + 1)}
+            onClick={() => handlePageChange(i + 1)}
             className={`px-4 py-2 rounded font-semibold ${
               currentPage === i + 1
-                ? "bg-green-500 text-black"
+                ? "bg-orange-500 text-black"
                 : "bg-white/10 text-white hover:bg-white/20"
             }`}
           >
@@ -124,41 +119,40 @@ const Projects = () => {
           </button>
         ))}
         <button
-          onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
+          onClick={() => handlePageChange(Math.min(currentPage + 1, totalPages))}
           disabled={currentPage === totalPages}
-          className="px-4 py-2 rounded bg-green-700 hover:bg-green-800 disabled:opacity-40"
+          className="px-4 py-2 rounded bg-orange-700 hover:bg-orange-800 disabled:opacity-40"
         >
           Sonraki →
         </button>
       </div>
 
-      {/* Modal (Pop-up) */}
       {selected && (
         <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center px-4">
           <div className="bg-gray-900 rounded-lg w-full max-w-5xl max-h-[95vh] overflow-y-auto relative p-6 shadow-xl">
             <button
               onClick={() => setSelected(null)}
-              className="absolute top-4 right-4 text-white text-2xl hover:text-red-500"
+              className="absolute top-4 right-4 text-red-500 text-2xl hover:text-red-600 z-50"
             >
               ✕
             </button>
-
             {selected.images && selected.images.length > 1 ? (
               <div className="relative">
                 <img
                   src={selected.images[slideIndex]}
                   alt={selected.title}
-                  className="w-full max-h-[400px] object-contain rounded mb-6"
+                  onClick={() => setFullscreenImage(selected.images[slideIndex])}
+                  className="w-full max-h-[400px] object-contain rounded mb-6 cursor-zoom-in"
                 />
                 <button
                   onClick={() => handlePrev(selected.images.length)}
-                  className="absolute left-2 top-1/2 transform -translate-y-1/2 text-green-400 text-4xl"
+                  className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500 text-4xl"
                 >
                   ◀
                 </button>
                 <button
                   onClick={() => handleNext(selected.images.length)}
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 text-green-400 text-4xl"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500 text-4xl"
                 >
                   ▶
                 </button>
@@ -167,11 +161,11 @@ const Projects = () => {
               <img
                 src={selected.image}
                 alt={selected.title}
-                className="w-full max-h-[400px] object-contain rounded mb-6"
+                onClick={() => setFullscreenImage(selected.image)}
+                className="w-full max-h-[400px] object-contain rounded mb-6 cursor-zoom-in"
               />
             )}
-
-            <h3 className="text-3xl font-bold text-green-400 mb-4">
+            <h3 className="text-3xl font-bold text-orange-400 mb-4">
               {selected.title}
             </h3>
             <p className="text-gray-300 mb-6 leading-relaxed text-lg">
@@ -180,7 +174,7 @@ const Projects = () => {
             <div className="flex flex-wrap gap-4">
               <a
                 href={selected.github}
-                className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded text-lg"
+                className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded text-lg"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -199,7 +193,53 @@ const Projects = () => {
         </div>
       )}
 
-      {/* GitHub Bağlantısı */}
+      {fullscreenImage && (
+        <div
+          className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center"
+          onClick={() => setFullscreenImage(null)}
+        >
+          <button
+            onClick={() => setFullscreenImage(null)}
+            className="absolute top-4 right-4 text-red-500 text-3xl z-50 hover:text-red-600"
+          >
+            ✕
+          </button>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              const project = projects.find(p => p.images?.includes(fullscreenImage));
+              if (project && project.images) {
+                const currentIndex = project.images.indexOf(fullscreenImage);
+                const newIndex = (currentIndex - 1 + project.images.length) % project.images.length;
+                setFullscreenImage(project.images[newIndex]);
+              }
+            }}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-4xl"
+          >
+            ◀
+          </button>
+          <img
+            src={fullscreenImage}
+            alt="Fullscreen"
+            className="max-w-full max-h-full object-contain cursor-zoom-out"
+          />
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              const project = projects.find(p => p.images?.includes(fullscreenImage));
+              if (project && project.images) {
+                const currentIndex = project.images.indexOf(fullscreenImage);
+                const newIndex = (currentIndex + 1) % project.images.length;
+                setFullscreenImage(project.images[newIndex]);
+              }
+            }}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-4xl"
+          >
+            ▶
+          </button>
+        </div>
+      )}
+
       <motion.p
         className="text-center text-gray-400 mt-16 text-sm md:text-base"
         initial={{ opacity: 0, y: 20 }}
@@ -207,12 +247,12 @@ const Projects = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true, amount: 0.4 }}
       >
-        Bu projelerin detaylarına ve daha fazlasına{" "}
+        Bu projelerin detaylarına ve daha fazlasına {" "}
         <a
           href="https://github.com/ebrarkadir"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-green-400 hover:underline"
+          className="text-orange-400 hover:underline"
         >
           GitHub profilimden
         </a>{" "}

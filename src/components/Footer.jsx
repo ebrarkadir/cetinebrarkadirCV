@@ -13,7 +13,7 @@ const Footer = () => {
         <p className="text-sm mb-4">
           Ziyaretiniz için teşekkür ederim. Görüşmek üzere!
         </p>
-        <div className="flex justify-center items-center gap-2 text-green-500 text-sm">
+        <div className="flex justify-center items-center gap-2 text-orange-500 text-sm">
           <span>Hazırlayan:</span>
           <FaLaptopCode className="text-xl" />
           <span>Ebrar Kadir</span>

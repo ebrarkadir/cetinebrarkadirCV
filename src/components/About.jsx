@@ -25,7 +25,7 @@ const About = () => {
 
     >
       <motion.h2
-        className="text-3xl sm:text-4xl md:text-5xl font-bold text-green-400 mb-6 text-center"
+        className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-500 mb-6 text-center"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -76,7 +76,7 @@ const About = () => {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="w-[22%] min-w-[70px] bg-gray-800 hover:bg-green-700 transition rounded-xl p-2 text-center text-white text-sm font-semibold shadow-md"
+            className="w-[22%] min-w-[70px] bg-gray-800 hover:bg-orange-700 transition rounded-xl p-2 text-center text-white text-sm font-semibold shadow-md"
           >
             {skill}
           </div>

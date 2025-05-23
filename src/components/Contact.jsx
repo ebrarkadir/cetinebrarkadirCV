@@ -33,7 +33,7 @@ const Contact = () => {
 
     >
       <motion.h2
-        className="text-4xl md:text-5xl font-bold text-green-400 mb-6 text-center"
+        className="text-4xl md:text-5xl font-bold text-orange-500 mb-6 text-center"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -83,7 +83,7 @@ const Contact = () => {
         ></textarea>
         <button
           type="submit"
-          className="bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded text-white font-medium"
+          className="bg-orange-600 hover:bg-orange-700 transition px-6 py-3 rounded text-white font-medium"
         >
           Gönder
         </button>
@@ -93,7 +93,7 @@ const Contact = () => {
       {showPopup && (
         <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center px-4">
           <div className="bg-gray-900 rounded-lg p-6 text-center max-w-md w-full shadow-xl">
-            <p className="text-lg text-green-400 font-semibold mb-4">
+            <p className="text-lg text-orange-400 font-semibold mb-4">
               Mesajınız gönderildi!
             </p>
             <p className="text-gray-300 mb-6">
@@ -101,7 +101,7 @@ const Contact = () => {
             </p>
             <button
               onClick={() => setShowPopup(false)}
-              className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded"
             >
               Kapat
             </button>
@@ -117,32 +117,32 @@ const Contact = () => {
         transition={{ duration: 0.6, delay: 0.1 }}
       >
         <ContactItem
-          icon={<FaEnvelope className="text-green-400 text-xl" />}
+          icon={<FaEnvelope className="text-orange-400 text-xl" />}
           text="cetinebrarkadir@gmail.com"
           href="mailto:cetinebrarkadir@gmail.com"
         />
         <ContactItem
-          icon={<FaPhone className="text-green-400 text-xl" />}
+          icon={<FaPhone className="text-orange-400 text-xl" />}
           text="+90 554 690 0088"
           href="tel:+905546900088"
         />
         <ContactItem
-          icon={<FaLinkedin className="text-green-400 text-xl" />}
+          icon={<FaLinkedin className="text-orange-400 text-xl" />}
           text="LinkedIn"
           href="https://www.linkedin.com/in/ebrar-kadir-%C3%A7etin-1a728019b/"
         />
         <ContactItem
-          icon={<FaGithub className="text-green-400 text-xl" />}
+          icon={<FaGithub className="text-orange-400 text-xl" />}
           text="GitHub"
           href="https://github.com/ebrarkadir"
         />
         <ContactItem
-          icon={<FaInstagram className="text-green-400 text-xl" />}
+          icon={<FaInstagram className="text-orange-400 text-xl" />}
           text="Instagram"
           href="https://instagram.com/ebrarkadircetnn"
         />
         <ContactItem
-          icon={<FaTelegramPlane className="text-green-400 text-xl" />}
+          icon={<FaTelegramPlane className="text-orange-400 text-xl" />}
           text="Telegram"
           href="https://t.me/Ekdrc"
         />
@@ -156,7 +156,7 @@ const ContactItem = ({ icon, text, href }) => (
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="flex items-center gap-2 text-gray-300 hover:text-green-400 transition"
+    className="flex items-center gap-2 text-gray-300 hover:text-orange-400 transition"
   >
     {icon}
     {text}
