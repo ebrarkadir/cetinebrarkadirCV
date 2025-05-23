@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { FaChevronDown, FaGithub, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-scroll";
 import profileImage from "../assets/profile.jpg";
 
 const Hero = () => {
@@ -36,13 +37,20 @@ const Hero = () => {
           {t("hero_description")}
         </p>
 
-        <motion.a
-          href="#projects"
-          className="inline-block bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-xl text-base md:text-lg transition-all"
-          whileHover={{ scale: 1.05 }}
+        <Link
+          to="projects"
+          smooth={true}
+          duration={600}
+          offset={-60}
+          spy={true}
         >
-          {t("hero_button")}
-        </motion.a>
+          <motion.button
+            className="inline-block bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-xl text-base md:text-lg transition-all"
+            whileHover={{ scale: 1.05 }}
+          >
+            {t("hero_button")}
+          </motion.button>
+        </Link>
 
         {/* Sosyal Medya Butonları */}
         <div className="flex justify-center md:justify-start mt-6 gap-6">
