@@ -1,12 +1,18 @@
 // src/components/Resume.jsx
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const Resume = () => {
+  const { t } = useTranslation();
+  const educationData = t("resume.educationData", { returnObjects: true });
+  const experienceData = t("resume.experienceData", { returnObjects: true });
+  const certificateData = t("resume.certificateData", { returnObjects: true });
+
   return (
     <section
       id="resume"
-       className="scroll-mt-12 pt-10 px-6 md:px-20 bg-gradient-to-b from-gray-900 to-black text-white min-h-[120vh]"
+      className="scroll-mt-12 pt-10 px-6 md:px-20 bg-gradient-to-b from-gray-900 to-black text-white min-h-[120vh]"
     >
       <motion.h2
         className="text-4xl md:text-5xl font-bold text-orange-600 mb-6 text-center"
@@ -15,7 +21,7 @@ const Resume = () => {
         transition={{ duration: 0.7 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        Özgeçmiş (CV)
+        {t("resume.title")}
       </motion.h2>
 
       <motion.p
@@ -25,7 +31,7 @@ const Resume = () => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true, amount: 0.4 }}
       >
-        Sürekli gelişen bir mühendis olarak eğitimim, tecrübem ve sertifikalarım burada.
+        {t("resume.description")}
       </motion.p>
 
       <motion.p
@@ -36,7 +42,7 @@ const Resume = () => {
         viewport={{ once: true, amount: 0.4 }}
       >
         <a href="/ebrarkadircetincv.pdf" download>
-          Detaylı CV için tıklayınız
+          {t("resume.download")}
         </a>
       </motion.p>
 
@@ -44,7 +50,7 @@ const Resume = () => {
         {/* Eğitim */}
         <div>
           <h3 className="text-xl font-bold text-orange-500 mb-4 text-center border-b border-orange-700 pb-2">
-            🎓 Eğitim
+            🎓 {t("resume.education")}
           </h3>
           <div className="space-y-4">
             {educationData.map((item, i) => (
@@ -56,7 +62,7 @@ const Resume = () => {
         {/* Deneyim */}
         <div>
           <h3 className="text-xl font-bold text-orange-500 mb-4 text-center border-b border-orange-700 pb-2">
-            🧑‍💻 Deneyim
+            🧑‍💻 {t("resume.experience")}
           </h3>
           <div className="space-y-4">
             {experienceData.map((item, i) => (
@@ -68,7 +74,7 @@ const Resume = () => {
         {/* Sertifikalar */}
         <div>
           <h3 className="text-xl font-bold text-orange-500 mb-4 text-center border-b border-orange-700 pb-2">
-            📜 Sertifikalar
+            📜 {t("resume.certificates")}
           </h3>
           <div className="space-y-3">
             {certificateData.map((item, i) => (
@@ -107,7 +113,7 @@ const ResumeItem = ({ year, title, place, description, isCertificate }) => {
             rel="noopener noreferrer"
             className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-3 py-1 rounded"
           >
-            Belgeyi Gör
+            View Certificate
           </a>
         ) : (
           description.replace(/\[.*?\]\(.*?\)/, "")
@@ -116,103 +122,5 @@ const ResumeItem = ({ year, title, place, description, isCertificate }) => {
     </motion.div>
   );
 };
-
-const educationData = [
-  {
-    year: "2021 - 2025",
-    title: "Bilgisayar Mühendisliği",
-    place: "Süleyman Demirel Üniversitesi",
-    description: "Lisans derecesi",
-  },
-  {
-    year: "2021 - 2026",
-    title: "Yönetim Bilişim Sistemleri",
-    place: "Anadolu Üniversitesi",
-    description: "Lisans derecesi (ikinci üniversite)",
-  },
-  {
-    year: "2019 - 2021",
-    title: "Bilgisayar Programcılığı",
-    place: "Kocaeli Üniversitesi",
-    description: "Ön lisans programı",
-  },
-  {
-    year: "2014 - 2018",
-    title: "Elektrik Elektronik",
-    place: "Rahmiye Sare Palalı MTAL",
-    description: "Mesleki ve Teknik Lise",
-  },
-];
-
-const experienceData = [
-  {
-    year: "Tem 2024 - Eyl 2024",
-    title: "Network Developer Stajyeri",
-    place: "Xlog",
-    description: "Ağ sistemleri geliştirme üzerine staj deneyimi.",
-  },
-  {
-    year: "May 2023 - Eyl 2023",
-    title: "Junior .NET Developer",
-    place: "SDÜ Bilgi İşlem Daire Başkanlığı",
-    description: ".NET tabanlı uygulamalarda geliştirme deneyimi.",
-  },
-  {
-    year: "Eki 2021 - May 2023",
-    title: "Hardware Technician",
-    place: "SDÜ Bilgi İşlem Daire Başkanlığı",
-    description: "Donanım destek ve sistem kurulum sorumluluğu.",
-  },
-  {
-    year: "Haz 2016 - Tem 2016",
-    title: "Elektrik Elektronik Stajyeri",
-    place: "TCDD",
-    description: "Elektrik sistemleri üzerine mesleki staj.",
-  },
-];
-
-const certificateData = [
-  {
-    year: "Nis 2023",
-    title: "CyberOps Associate",
-    place: "Cisco",
-    description:
-      "[Belgeyi Gör](https://www.credly.com/badges/5cf77291-de61-4128-85e4-c2344612e538/linked_in?t=rswj3x)",
-  },
-  {
-    year: "Şub 2023",
-    title: "Pre Security Learning Path",
-    place: "TryHackMe",
-    description:
-      "[Belge: THM-QNVOMXGZK8](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-QNVOMXGZK8.png)",
-  },
-  {
-    year: "Oca 2023",
-    title: "CCNA: Introduction to Networks",
-    place: "Cisco",
-    description:
-      "[Belgeyi Gör](https://www.credly.com/badges/dcf4f791-8448-4ea7-a790-9deb6d768397/linked_in_profile)",
-  },
-  {
-    year: "Oca 2023",
-    title: "Introduction To Cyber Security",
-    place: "TryHackMe",
-    description:
-      "[Belge: THM-BGY4AKDD3T](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-BGY4AKDD3T.png)",
-  },
-  {
-    year: "Ara 2022",
-    title: "Linux Essentials",
-    place: "Cisco",
-    description: "Linux temelleri üzerine giriş seviyesi eğitim.",
-  },
-  {
-    year: "Kas 2022",
-    title: "Introduction to Cybersecurity",
-    place: "Cisco",
-    description:
-      "[Belgeyi Gör](https://www.credly.com/badges/130f0c1b-24bb-4535-ac4d-1a8f5b7b66a6/linked_in_profile)",
-  },
-];
 
 export default Resume;

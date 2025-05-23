@@ -52,7 +52,8 @@ const Projects = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        İşte bugüne kadar geliştirdiğim, her biri kendi alanında özgün çözümler sunan projelerim.
+        İşte bugüne kadar geliştirdiğim, her biri kendi alanında özgün çözümler
+        sunan projelerim.
       </motion.p>
 
       <div className="flex flex-wrap justify-center gap-4 md:gap-6">
@@ -119,7 +120,9 @@ const Projects = () => {
           </button>
         ))}
         <button
-          onClick={() => handlePageChange(Math.min(currentPage + 1, totalPages))}
+          onClick={() =>
+            handlePageChange(Math.min(currentPage + 1, totalPages))
+          }
           disabled={currentPage === totalPages}
           className="px-4 py-2 rounded bg-orange-700 hover:bg-orange-800 disabled:opacity-40"
         >
@@ -141,7 +144,9 @@ const Projects = () => {
                 <img
                   src={selected.images[slideIndex]}
                   alt={selected.title}
-                  onClick={() => setFullscreenImage(selected.images[slideIndex])}
+                  onClick={() =>
+                    setFullscreenImage(selected.images[slideIndex])
+                  }
                   className="w-full max-h-[400px] object-contain rounded mb-6 cursor-zoom-in"
                 />
                 <button
@@ -168,7 +173,7 @@ const Projects = () => {
             <h3 className="text-3xl font-bold text-orange-400 mb-4">
               {selected.title}
             </h3>
-            <p className="text-gray-300 mb-6 leading-relaxed text-lg">
+            <p className="text-gray-300 mb-6 leading-relaxed text-sm sm:text-base md:text-lg">
               {selected.fullDescription}
             </p>
             <div className="flex flex-wrap gap-4">
@@ -207,10 +212,14 @@ const Projects = () => {
           <button
             onClick={(e) => {
               e.stopPropagation();
-              const project = projects.find(p => p.images?.includes(fullscreenImage));
+              const project = projects.find((p) =>
+                p.images?.includes(fullscreenImage)
+              );
               if (project && project.images) {
                 const currentIndex = project.images.indexOf(fullscreenImage);
-                const newIndex = (currentIndex - 1 + project.images.length) % project.images.length;
+                const newIndex =
+                  (currentIndex - 1 + project.images.length) %
+                  project.images.length;
                 setFullscreenImage(project.images[newIndex]);
               }
             }}
@@ -226,7 +235,9 @@ const Projects = () => {
           <button
             onClick={(e) => {
               e.stopPropagation();
-              const project = projects.find(p => p.images?.includes(fullscreenImage));
+              const project = projects.find((p) =>
+                p.images?.includes(fullscreenImage)
+              );
               if (project && project.images) {
                 const currentIndex = project.images.indexOf(fullscreenImage);
                 const newIndex = (currentIndex + 1) % project.images.length;
@@ -247,7 +258,7 @@ const Projects = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true, amount: 0.4 }}
       >
-        Bu projelerin detaylarına ve daha fazlasına {" "}
+        Bu projelerin detaylarına ve daha fazlasına{" "}
         <a
           href="https://github.com/ebrarkadir"
           target="_blank"

@@ -1,10 +1,12 @@
 // src/components/Hero.jsx
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { FaChevronDown, FaGithub, FaLinkedin } from "react-icons/fa";
 import profileImage from "../assets/profile.jpg";
 
 const Hero = () => {
+  const { t } = useTranslation();
   const [showArrow, setShowArrow] = useState(true);
 
   useEffect(() => {
@@ -28,11 +30,10 @@ const Hero = () => {
         transition={{ duration: 1 }}
       >
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 text-orange-600">
-          Merhaba, ben Ebrar Kadir Çetin
+          {t("hero_title")}
         </h1>
         <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6">
-          Bilgisayar Mühendisi | Full Stack Web Geliştirici | Network
-          Geliştirici | Siber Güvenlik Meraklısı
+          {t("hero_description")}
         </p>
 
         <motion.a
@@ -40,7 +41,7 @@ const Hero = () => {
           className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-xl text-base md:text-lg transition-all"
           whileHover={{ scale: 1.05 }}
         >
-          Projelerime Göz At
+          {t("hero_button")}
         </motion.a>
 
         {/* Sosyal Medya Butonları */}

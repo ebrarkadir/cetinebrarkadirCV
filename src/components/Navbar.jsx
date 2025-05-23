@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
 
 const links = [
   { name: "Anasayfa", to: "home" },
@@ -13,6 +14,7 @@ const links = [
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { i18n } = useTranslation();
 
   return (
     <motion.nav
@@ -29,24 +31,50 @@ const Navbar = () => {
           offset={-60}
           className="text-2xl font-bold text-orange-600 cursor-pointer flex items-center gap-2"
         >
-          <span className="text-xl">&lt;/&gt;</span> Ebrar Kadir
+          <span className="text-xl">&lt;/&gt;</span> Ebrar Kadir Cetin
         </Link>
 
-        <ul className="hidden md:flex gap-8 text-lg font-medium">
-          {links.map((link) => (
-            <li key={link.name}>
-              <Link
-                to={link.to}
-                smooth={true}
-                duration={500}
-                offset={-60}
-                className="hover:text-orange-600 transition cursor-pointer"
-              >
-                {link.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="hidden md:flex items-center gap-6">
+          <ul className="flex gap-8 text-lg font-medium">
+            {links.map((link) => (
+              <li key={link.name}>
+                <Link
+                  to={link.to}
+                  smooth={true}
+                  duration={500}
+                  offset={-60}
+                  className="hover:text-orange-600 transition cursor-pointer"
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* Dil Seçici */}
+          <div className="flex gap-2">
+            <button
+              onClick={() => i18n.changeLanguage("tr")}
+              className={`px-2 py-1 rounded text-sm ${
+                i18n.language === "tr"
+                  ? "bg-orange-500 text-white"
+                  : "text-gray-300"
+              }`}
+            >
+              TR
+            </button>
+            <button
+              onClick={() => i18n.changeLanguage("en")}
+              className={`px-2 py-1 rounded text-sm ${
+                i18n.language === "en"
+                  ? "bg-orange-500 text-white"
+                  : "text-gray-300"
+              }`}
+            >
+              EN
+            </button>
+          </div>
+        </div>
 
         <button
           className="md:hidden focus:outline-none"
@@ -65,7 +93,7 @@ const Navbar = () => {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
           >
-            <ul className="flex flex-col gap-6">
+            <ul className="flex flex-col gap-6 mb-4">
               {links.map((link) => (
                 <li key={link.name}>
                   <Link
@@ -81,6 +109,36 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
+
+            {/* Mobil Dil Seçici */}
+            <div className="flex gap-2 justify-center">
+              <button
+                onClick={() => {
+                  i18n.changeLanguage("tr");
+                  setMenuOpen(false);
+                }}
+                className={`px-3 py-1 rounded text-sm ${
+                  i18n.language === "tr"
+                    ? "bg-orange-500 text-white"
+                    : "text-gray-300"
+                }`}
+              >
+                TR
+              </button>
+              <button
+                onClick={() => {
+                  i18n.changeLanguage("en");
+                  setMenuOpen(false);
+                }}
+                className={`px-3 py-1 rounded text-sm ${
+                  i18n.language === "en"
+                    ? "bg-orange-500 text-white"
+                    : "text-gray-300"
+                }`}
+              >
+                EN
+              </button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

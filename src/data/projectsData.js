@@ -3,7 +3,13 @@ const projects = [
   {
     id: 1,
     title: "ShiledWrt",
-    image: "/assets/shieldwrt.png",
+    images: [
+      "/assets/shieldwrt.png",
+      "/assets/shieldwrt1.jpeg",
+      "/assets/shieldwrt2.jpeg",
+      "/assets/shieldwrt3.jpeg",
+      "/assets/shieldwrt4.jpeg",
+    ],
     shortDescription:
       "OpenWRT destekli Raspberry Pi cihazı üzerinden firewall yönetimi sağlayan, React arayüzlü ve Node.js API tabanlı modern güvenlik çözümü.",
     fullDescription:

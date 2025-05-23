@@ -1,0 +1,110 @@
+{
+  "hero_title": "Merhaba, ben Ebrar Kadir Çetin",
+  "hero_description": "Bilgisayar Mühendisi | Full Stack Web Geliştirici | Network Geliştirici | Siber Güvenlik Meraklısı",
+  "hero_button": "Projelerime Göz At",
+
+  "aboutTitle": "Hakkımda",
+  "aboutDescription1": "Merhaba, ben Ebrar Kadir Çetin. Yazılım geliştirme, siber güvenlik ve ağ teknolojileri alanlarına tutkuyla bağlı bir bilgisayar mühendisiyim. Full stack web geliştirme, ağ sistemleri tasarımı ve güvenlik testleri gibi farklı disiplinlerde aktif olarak çalışmalar yürütüyorum.",
+  "aboutDescription2": "Hem frontend hem backend tarafında kapsamlı projeler geliştirdim; aynı zamanda sistem güvenliği ve ağ yapılandırmaları konusunda da deneyim sahibiyim. Linux tabanlı sistemler, FreeBSD ve OpenWRT gibi özel altyapılar üzerinde çalıştım.",
+  "aboutDescription3": "Web güvenliği alanında uygulamalı çalışmalar yaptım; özellikle Burp Suite kullanarak SQL Injection, DOM temelli zafiyetler ve diğer zayıflık analizleri üzerine testler gerçekleştirdim.",
+  "aboutDescription4": "Kendimi, sadece kod yazmakla kalmayıp altyapı ve güvenlik perspektifiyle de düşünebilen bir geliştirici olarak konumlandırıyorum. Sürekli öğrenen, çözüm odaklı ve sistematik bir yaklaşım benimseyerek yazılım dünyasında kalıcı değerler üretmeyi hedefliyorum.",
+
+  "resume": {
+    "title": "Özgeçmiş (CV)",
+    "description": "Sürekli gelişen bir mühendis olarak eğitimim, tecrübem ve sertifikalarım burada.",
+    "download": "Detaylı CV için tıklayınız",
+    "education": "Eğitim",
+    "experience": "Deneyim",
+    "certificates": "Sertifikalar",
+    "educationData": [
+      {
+        "year": "2021 - 2025",
+        "title": "Bilgisayar Mühendisliği",
+        "place": "Süleyman Demirel Üniversitesi",
+        "description": "Lisans derecesi"
+      },
+      {
+        "year": "2021 - 2026",
+        "title": "Yönetim Bilişim Sistemleri",
+        "place": "Anadolu Üniversitesi",
+        "description": "Lisans derecesi (ikinci üniversite)"
+      },
+      {
+        "year": "2019 - 2021",
+        "title": "Bilgisayar Programcılığı",
+        "place": "Kocaeli Üniversitesi",
+        "description": "Ön lisans programı"
+      },
+      {
+        "year": "2014 - 2018",
+        "title": "Elektrik Elektronik",
+        "place": "Rahmiye Sare Palalı MTAL",
+        "description": "Mesleki ve Teknik Lise"
+      }
+    ],
+    "experienceData": [
+      {
+        "year": "Tem 2024 - Eyl 2024",
+        "title": "Network Developer Stajyeri",
+        "place": "Xlog",
+        "description": "Ağ sistemleri geliştirme üzerine staj deneyimi."
+      },
+      {
+        "year": "May 2023 - Eyl 2023",
+        "title": "Junior .NET Developer",
+        "place": "SDÜ Bilgi İşlem Daire Başkanlığı",
+        "description": ".NET tabanlı uygulamalarda geliştirme deneyimi."
+      },
+      {
+        "year": "Eki 2021 - May 2023",
+        "title": "Hardware Technician",
+        "place": "SDÜ Bilgi İşlem Daire Başkanlığı",
+        "description": "Donanım destek ve sistem kurulum sorumluluğu."
+      },
+      {
+        "year": "Haz 2016 - Tem 2016",
+        "title": "Elektrik Elektronik Stajyeri",
+        "place": "TCDD",
+        "description": "Elektrik sistemleri üzerine mesleki staj."
+      }
+    ],
+    "certificateData": [
+      {
+        "year": "Nis 2023",
+        "title": "CyberOps Associate",
+        "place": "Cisco",
+        "description": "[Belgeyi Gör](https://www.credly.com/badges/5cf77291-de61-4128-85e4-c2344612e538/linked_in?t=rswj3x)"
+      },
+      {
+        "year": "Şub 2023",
+        "title": "Pre Security Learning Path",
+        "place": "TryHackMe",
+        "description": "[Belge: THM-QNVOMXGZK8](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-QNVOMXGZK8.png)"
+      },
+      {
+        "year": "Oca 2023",
+        "title": "CCNA: Introduction to Networks",
+        "place": "Cisco",
+        "description": "[Belgeyi Gör](https://www.credly.com/badges/dcf4f791-8448-4ea7-a790-9deb6d768397/linked_in_profile)"
+      },
+      {
+        "year": "Oca 2023",
+        "title": "Introduction To Cyber Security",
+        "place": "TryHackMe",
+        "description": "[Belge: THM-BGY4AKDD3T](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-BGY4AKDD3T.png)"
+      },
+      {
+        "year": "Ara 2022",
+        "title": "Linux Essentials",
+        "place": "Cisco",
+        "description": "Linux temelleri üzerine giriş seviyesi eğitim."
+      },
+      {
+        "year": "Kas 2022",
+        "title": "Introduction to Cybersecurity",
+        "place": "Cisco",
+        "description": "[Belgeyi Gör](https://www.credly.com/badges/130f0c1b-24bb-4535-ac4d-1a8f5b7b66a6/linked_in_profile)"
+      }
+    ]
+  }
+}
