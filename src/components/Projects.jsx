@@ -184,14 +184,7 @@ const Projects = () => {
               >
                 GitHub
               </a>
-              <a
-                href={selected.demo}
-                className="bg-white text-black hover:bg-gray-200 px-6 py-3 rounded text-lg"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Demo
-              </a>
+              
             </div>
           </div>
         </div>

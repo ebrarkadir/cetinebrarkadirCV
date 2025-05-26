@@ -10,7 +10,7 @@ const projects = [
       "/assets/shieldwrt3.jpeg",
       "/assets/shieldwrt4.jpeg",
     ],
-    github: "#",
+    github: "https://github.com/ebrarkadir/ShieldWrt",
     demo: "#",
     translations: {
       tr: {
