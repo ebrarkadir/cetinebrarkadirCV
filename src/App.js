@@ -17,8 +17,8 @@ function App() {
       <main className="flex flex-col">
         <Hero />
         <About />
-        <Projects />
         <Resume />
+        <Projects />
         <Contact />
         <Footer />
       </main>

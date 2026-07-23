@@ -38,7 +38,7 @@ const Hero = () => {
         </p>
 
         <Link
-          to="projects"
+          to="resume"
           smooth={true}
           duration={600}
           offset={-60}

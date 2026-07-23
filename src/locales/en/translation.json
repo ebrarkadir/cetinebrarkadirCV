@@ -1,13 +1,36 @@
 {
   "hero_title": "Hello, I'm Ebrar Kadir Çetin",
-  "hero_description": "Computer Engineer | Full Stack Web Developer | Network Developer | Cybersecurity Enthusiast",
-  "hero_button": "View My Projects",
+  "hero_description": "Computer Engineer | Cybersecurity & Network | Software Developer",
+  "hero_button": "View My Resume",
 
   "aboutTitle": "About Me",
-  "aboutDescription1": "Hi, I'm Ebrar Kadir Çetin. I am a computer engineer passionate about software development, cybersecurity, and network technologies. I actively work in different disciplines such as full stack web development, system design, and security testing.",
-  "aboutDescription2": "I have developed comprehensive projects in both frontend and backend; I also have experience in system security and network configurations. I have worked on custom infrastructures based on Linux, FreeBSD, and OpenWRT.",
-  "aboutDescription3": "I have conducted practical studies in the field of web security, especially testing for SQL Injection, DOM-based vulnerabilities, and other weaknesses using Burp Suite.",
-  "aboutDescription4": "I position myself as a developer who not only writes code but also thinks with an infrastructure and security perspective. I aim to create lasting value in the software world by adopting a constantly learning, solution-oriented, and systematic approach.",
+  "aboutDescription1": "I am a Computer Engineering graduate with a strong software development background and a focus on cybersecurity and network technologies. I have worked on network systems, firewall technologies, web/API security, vulnerability assessment, container security and Linux-based systems.",
+  "aboutDescription2": "I have experience in developing web and API-based applications, network-oriented software, scripts, UI/network testing, test automation, and performance/load testing. I have also taken part in testing, validation and development processes on SD-WAN, SDN and SD-Fabric infrastructures.",
+  "aboutDescription3": "I have worked on web/API security, vulnerability scanning, container security, security validation, test automation and load testing processes using tools such as Burp Suite, Nessus, NeuVector, JMeter and Robot Framework. I have also developed Linux-based network scripts, firewall/network automations and web/NMS applications for device management.",
+  "aboutDescription4": "I combine cybersecurity, network engineering, network software, software development and testing processes with a technical perspective. I adopt a disciplined, responsible and team-oriented working approach.",
+  "skillsTitle": "Technical Skills",
+  "skillCategories": [
+    {
+      "title": "Cybersecurity",
+      "items": ["Burp Suite", "Nessus", "NeuVector", "Nmap", "Metasploit", "OWASP Top 10", "Web/API Security Testing", "Vulnerability Assessment", "Container Security", "Image Scanning", "Runtime Security", "Firewall Rule Management"]
+    },
+    {
+      "title": "Network & Infrastructure",
+      "items": ["TCP/IP", "Subnetting", "VLAN", "NAT", "Routing", "DHCP", "DNS", "VPN & Tunneling", "SD-WAN", "SDN", "SD-Fabric", "OpenWRT", "FreeBSD", "Wireshark", "SSH", "Linux Networking", "Network Troubleshooting"]
+    },
+    {
+      "title": "Testing & Automation",
+      "items": ["JMeter", "Robot Framework", "Selenium", "UI Testing", "API Testing", "Network Testing", "Security Testing", "Load/Performance Testing", "Test Case Design", "Regression Testing", "Test Reporting"]
+    },
+    {
+      "title": "Software Development",
+      "items": ["C#", ".NET Core", "ASP.NET Core", "Node.js", "React", "Angular", "JavaScript", "REST API", "JWT", "Python", "Go", "GoPacket", "Network Automation", "NMS Development", "REST-based Device Management", "SSH-based Automation"]
+    },
+    {
+      "title": "Database & Tools",
+      "items": ["MSSQL", "MySQL", "PostgreSQL", "MongoDB", "Git", "Docker", "Postman", "Swagger", "Linux"]
+    }
+  ],
 
   
   "projects": {
@@ -58,28 +81,46 @@
   ],
   "resume.experienceData": [
     {
+      "year": "Nov 2025 - Jun 2026",
+      "title": "Associate Network Solutions Test Engineer",
+      "place": "ULAK Haberleşme",
+      "description": "Performed UI, network, cybersecurity, load and performance tests on SD-WAN, SDN and SD-Fabric infrastructures. Worked on web/API security, vulnerability scanning, security validation, test automation and load testing processes using Burp Suite, Nessus, NeuVector, JMeter and Robot Framework. Developed 3 internal web applications, firewall/network scripts, and NMS features for SDN/SD-Fabric device management."
+    },
+    {
+      "year": "Sep 2025 - Nov 2025",
+      "title": "Network Solutions Test Intern",
+      "place": "ULAK Haberleşme",
+      "description": "Worked on SD-WAN, SDN and SD-Fabric infrastructures; developed Linux-based network scripts and web projects for network management."
+    },
+    {
+      "year": "Aug 2025 - Sep 2025",
+      "title": "IT Support Intern",
+      "place": "Ministry of Labour and Social Security",
+      "description": "Provided hardware and network device support; worked on data mining and machine learning studies using Python."
+    },
+    {
       "year": "Jul 2024 - Sep 2024",
-      "title": "Network Developer Intern",
-      "place": "Xlog",
-      "description": "Internship experience in network systems development."
+      "title": "Intern Network Developer",
+      "place": "Arjeta",
+      "description": "Worked on network systems development, firewall and switch configurations, and OpenWRT-based hardware."
     },
     {
       "year": "May 2023 - Sep 2023",
       "title": "Junior .NET Developer",
-      "place": "SDÜ Information Technologies Department",
-      "description": "Experience in developing .NET-based applications."
+      "place": "SDU Department of Information Technology",
+      "description": "Developed a web-based application using .NET Core and MSSQL. Took an active role within the team."
     },
     {
       "year": "Oct 2021 - May 2023",
-      "title": "Hardware Technician",
-      "place": "SDÜ Information Technologies Department",
-      "description": "Responsible for hardware support and system setups."
+      "title": "IT Support Technician",
+      "place": "SDU Department of Information Technology",
+      "description": "Handled hardware installation, maintenance, network infrastructure management and technical support."
     },
     {
       "year": "Jun 2016 - Jul 2016",
-      "title": "Electrical Electronics Intern",
+      "title": "Electrical & Electronics Technician Intern",
       "place": "TCDD",
-      "description": "Vocational internship in electrical systems."
+      "description": "Provided installation, maintenance and technical support for electrical and electronics systems."
     }
   ],
   "resume.certificateData": [
@@ -141,7 +182,7 @@
   "home": "Home",
   "about": "About",
   "projects": "Projects",
-  "resume": "Resume (CV)",
+  "resume": "Resume / CV",
   "contact": "Contact"
 }
 

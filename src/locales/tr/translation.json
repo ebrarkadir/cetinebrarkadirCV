@@ -1,13 +1,36 @@
 {
   "hero_title": "Merhaba, ben Ebrar Kadir Çetin",
-  "hero_description": "Bilgisayar Mühendisi | Full Stack Web Geliştirici | Network Geliştirici | Siber Güvenlik Meraklısı",
-  "hero_button": "Projelerime Göz At",
+  "hero_description": "Bilgisayar Mühendisi | Siber Güvenlik & Network | Yazılım Geliştirici",
+  "hero_button": "Özgeçmişime Göz At",
 
   "aboutTitle": "Hakkımda",
-  "aboutDescription1": "Merhaba, ben Ebrar Kadir Çetin. Yazılım geliştirme, siber güvenlik ve ağ teknolojileri alanlarına tutkuyla bağlı bir bilgisayar mühendisiyim. Full stack web geliştirme, ağ sistemleri tasarımı ve güvenlik testleri gibi farklı disiplinlerde aktif olarak çalışmalar yürütüyorum.",
-  "aboutDescription2": "Hem frontend hem backend tarafında kapsamlı projeler geliştirdim; aynı zamanda sistem güvenliği ve ağ yapılandırmaları konusunda da deneyim sahibiyim. Linux tabanlı sistemler, FreeBSD ve OpenWRT gibi özel altyapılar üzerinde çalıştım.",
-  "aboutDescription3": "Web güvenliği alanında uygulamalı çalışmalar yaptım; özellikle Burp Suite kullanarak SQL Injection, DOM temelli zafiyetler ve diğer zayıflık analizleri üzerine testler gerçekleştirdim.",
-  "aboutDescription4": "Kendimi, sadece kod yazmakla kalmayıp altyapı ve güvenlik perspektifiyle de düşünebilen bir geliştirici olarak konumlandırıyorum. Sürekli öğrenen, çözüm odaklı ve sistematik bir yaklaşım benimseyerek yazılım dünyasında kalıcı değerler üretmeyi hedefliyorum.",
+  "aboutDescription1": "Bilgisayar Mühendisliği mezunuyum. Yazılım geliştirme altyapısı güçlü, siber güvenlik ve network odaklı bir mühendis olarak network sistemleri, firewall teknolojileri, web/API güvenliği, zafiyet tarama, container security ve Linux tabanlı sistemler üzerine çalışmalar yaptım.",
+  "aboutDescription2": "Web ve API tabanlı uygulamalar geliştirme, network yazılımı, script geliştirme, UI/network testleri, test otomasyonu ve performans/yük testleri alanlarında deneyim sahibiyim. SD-WAN, SDN ve SD-Fabric altyapıları üzerinde test, doğrulama ve geliştirme süreçlerinde görev aldım.",
+  "aboutDescription3": "Burp Suite, Nessus, NeuVector, JMeter ve Robot Framework gibi araçlarla web/API güvenliği, zafiyet tarama, container security, güvenlik doğrulama, test otomasyonu ve yük testi süreçlerinde çalıştım. Ayrıca Linux tabanlı network scriptleri, firewall/network otomasyonları ve cihaz yönetimine yönelik web/NMS uygulamaları geliştirdim.",
+  "aboutDescription4": "Siber güvenlik, network engineering, network software, yazılım geliştirme ve test süreçlerini birlikte ele alan teknik bir bakış açısına sahibim. Takım çalışmasına uyumlu, iş disiplini yüksek ve sorumluluk bilinciyle hareket eden bir çalışma yaklaşımı benimsiyorum.",
+  "skillsTitle": "Teknik Yetenekler",
+  "skillCategories": [
+    {
+      "title": "Siber Güvenlik",
+      "items": ["Burp Suite", "Nessus", "NeuVector", "Nmap", "Metasploit", "OWASP Top 10", "Web/API Security Testing", "Vulnerability Assessment", "Container Security", "Image Scanning", "Runtime Security", "Firewall Rule Management"]
+    },
+    {
+      "title": "Network & Altyapı",
+      "items": ["TCP/IP", "Subnetting", "VLAN", "NAT", "Routing", "DHCP", "DNS", "VPN & Tunneling", "SD-WAN", "SDN", "SD-Fabric", "OpenWRT", "FreeBSD", "Wireshark", "SSH", "Linux Networking", "Network Troubleshooting"]
+    },
+    {
+      "title": "Test & Otomasyon",
+      "items": ["JMeter", "Robot Framework", "Selenium", "UI Testing", "API Testing", "Network Testing", "Security Testing", "Load/Performance Testing", "Test Case Design", "Regression Testing", "Test Reporting"]
+    },
+    {
+      "title": "Yazılım Geliştirme",
+      "items": ["C#", ".NET Core", "ASP.NET Core", "Node.js", "React", "Angular", "JavaScript", "REST API", "JWT", "Python", "Go", "GoPacket", "Network Automation", "NMS Development", "REST-based Device Management", "SSH-based Automation"]
+    },
+    {
+      "title": "Veritabanı & Araçlar",
+      "items": ["MSSQL", "MySQL", "PostgreSQL", "MongoDB", "Git", "Docker", "Postman", "Swagger", "Linux"]
+    }
+  ],
 
   "projects": {
     "title": "Projelerim",
@@ -59,28 +82,46 @@
     ],
     "experienceData": [
       {
+        "year": "Kas 2025 - Haz 2026",
+        "title": "Associate Network Solutions Test Engineer",
+        "place": "ULAK Haberleşme",
+        "description": "SD-WAN başta olmak üzere SDN ve SD-Fabric altyapılarında UI, network, siber güvenlik, load ve performans testleri gerçekleştirdim. Burp Suite, Nessus, NeuVector, JMeter ve Robot Framework ile web/API güvenliği, zafiyet tarama, güvenlik doğrulama, test otomasyonu ve yük testi süreçlerinde görev aldım. Ekip içi kullanıma yönelik 3 web uygulaması, firewall/network scriptleri ve SDN/SD-Fabric cihaz yönetimine yönelik NMS geliştirme çalışmaları yürüttüm."
+      },
+      {
+        "year": "Eyl 2025 - Kas 2025",
+        "title": "Network Solutions Test Intern",
+        "place": "ULAK Haberleşme",
+        "description": "SD-WAN, SDN ve SD-Fabric altyapıları üzerine çalışmalar; Linux tabanlı network scriptleri geliştirme ve ağ yönetimine yönelik web projeleri geliştirme."
+      },
+      {
+        "year": "Ağu 2025 - Eyl 2025",
+        "title": "IT Support Intern",
+        "place": "Çalışma ve Sosyal Güvenlik Bakanlığı",
+        "description": "Donanım ve ağ cihazları desteği, Python ile veri madenciliği ve makine öğrenmesi üzerine çalışmalar."
+      },
+      {
         "year": "Tem 2024 - Eyl 2024",
-        "title": "Network Developer Stajyeri",
-        "place": "Xlog",
-        "description": "Ağ sistemleri geliştirme üzerine staj deneyimi."
+        "title": "Intern Network Developer",
+        "place": "Arjeta",
+        "description": "Ağ sistemleri geliştirme, firewall ve switch konfigürasyonları ve OpenWRT tabanlı donanım üzerinde çalışmalar."
       },
       {
         "year": "May 2023 - Eyl 2023",
         "title": "Junior .NET Developer",
         "place": "SDÜ Bilgi İşlem Daire Başkanlığı",
-        "description": ".NET tabanlı uygulamalarda geliştirme deneyimi."
+        "description": ".NET Core ve MSSQL kullanarak web tabanlı bir uygulama geliştirdik. Ekip içinde aktif rol aldım."
       },
       {
         "year": "Eki 2021 - May 2023",
-        "title": "Hardware Technician",
+        "title": "IT Support Technician",
         "place": "SDÜ Bilgi İşlem Daire Başkanlığı",
-        "description": "Donanım destek ve sistem kurulum sorumluluğu."
+        "description": "Donanım kurulum, bakım, ağ altyapısı yönetimi, teknik destek."
       },
       {
         "year": "Haz 2016 - Tem 2016",
-        "title": "Elektrik Elektronik Stajyeri",
+        "title": "Electrical & Electronics Technician Intern",
         "place": "TCDD",
-        "description": "Elektrik sistemleri üzerine mesleki staj."
+        "description": "Elektrik ve elektronik sistemler için kurulum, bakım ve teknik destek."
       }
     ],
     "certificateData": [
@@ -144,8 +185,8 @@
 "nav": {
   "home": "Anasayfa",
   "about": "Hakkımda",
-  "projects": "Projeler",
-  "resume": "Özgeçmiş (CV)",
+  "projects": "Projelerim",
+  "resume": "Özgeçmiş / CV",
   "contact": "İletişim"
 }
 
